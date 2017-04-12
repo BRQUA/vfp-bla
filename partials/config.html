@@ -1,0 +1,108 @@
+<div class="card meetings cf">
+    <div class="textintro">
+        <h1 style="text-align: center">Vestas Factory Portal - Brighton Nacelles</h1>
+        <h3 style="text-align:center;color: yellow">Changes can only be made when in "Stopped" status.</h3>
+        <p>{{ message }}</p>
+        <div class="container">
+            <div class="col-md-4">
+                <h3 class="{{nacelle.status}}">Nacelle - {{nacelle.status}}</h3>
+                <label> Nacelle Static Time:
+                    <br>
+                    <input type="number" ng-model="nacInfo.staticTakt" ng-readonly="nacelle.status != 'Stopped'" /> </label>
+                <br>
+                <label> Nacelle Actual Time:
+                    <br>
+                    <input type="number" ng-model="nacInfo.actualTakt" ng-readonly="nacelle.status != 'Stopped'" /> </label>
+                <br>
+                <label> Nacelle Accum. Time:
+                    <br>
+                    <input type="number" ng-model="nacInfo.accTime" ng-readonly="nacelle.status != 'Stopped'" /> </label>
+                <br>
+                <label> Nac. Last Step Time:
+                    <br>
+                    <div style="width: 100%; padding: 12px 20px; margin: 8px 0; box-sizing: border-box; background-color:white;">{{nacInfo.lastStep | date:'shortTime'}}</div>
+                    <br>
+                    <label> Nacelle Actual Goal:
+                        <br>
+                        <input type="number" ng-model="nacInfo.actualGoal" ng-readonly="nacelle.status != 'Stopped'" /> </label>
+                    <br>
+                    <label> Nacelle Weekly Goal:
+                        <br>
+                        <input type="number" ng-model="nacInfo.weeklyGoal" ng-readonly="nacelle.status != 'Stopped'" /> </label>
+                    <br> </div>
+            <div class="col-md-4">
+                <h3 class="{{hub.status}}">Hub - {{hub.status}}</h3>
+                <label> Hub Static Time:
+                    <br>
+                    <input type="number" ng-model="hubInfo.staticTakt" ng-readonly="hub.status != 'Stopped'" /> </label>
+                <br>
+                <label> Hub Actual Time:
+                    <br>
+                    <input type="number" ng-model="hubInfo.actualTakt" ng-readonly="hub.status != 'Stopped'" /> </label>
+                <br>
+                <label> Hub Accumulated Time:
+                    <br>
+                    <input type="number" ng-model="hubInfo.accTime" ng-readonly="hub.status != 'Stopped'" /> </label>
+                <br>
+                <label> Hub Last Step Time:
+                    <br>
+                    <div style="width: 100%; padding: 12px 20px; margin: 8px 0; box-sizing: border-box; background-color:white;">{{hubInfo.lastStep | date:'shortTime'}}</div>
+                    <br>
+                    <label> Hub Actual Goal:
+                        <br>
+                        <input type="number" ng-model="hubInfo.actualGoal" ng-readonly="hub.status != 'Stopped'" /> </label>
+                    <br>
+                    <label> Hub Weekly Goal:
+                        <br>
+                        <input type="number" ng-model="hubInfo.weeklyGoal" ng-readonly="hub.status != 'Stopped'" /> </label>
+                    <br> </div>
+            <div class="col-md-4">
+                <h3>Configuration Options</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="slideThree">
+                                <input type="checkbox" id="logging" ng-model="config.logging">
+                                <label for="logging"></label>
+                            </div>
+                        </td>
+                        <td>Logging (Disables logging)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="slideThree">
+                                <input type="checkbox" id="autoTakt" ng-model="config.autoTakt">
+                                <label for="autoTakt"></label>
+                            </div>
+                        </td>
+                        <td>Auto Takt Timer (uncheck to switch back to manual timer)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-danger" ng-click="clearLogs()">X</button>
+                        </td>
+                        <td>Clear Logs</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-danger" ng-click="autoTaktStopNac()">X</button>
+                        </td>
+                        <td>NAC - AutoTakt Stop (Only use when timer will not stop)</td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <button type="button" class="btn btn-danger" ng-click="autoTaktStopHub()">X</button>
+                        </td>
+                        <td>Hub - AutoTakt Stop (Only use when timer will not stop)</td>
+                    </tr>
+                </table>
+                <!-- Slide THREE -->
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<hr> <span>
+ <a href="#" ng-click="authObj.$signOut()"><h2 style="text-align:center;color:blue">Sign out</h2></a>
+</span> </div>
+<!-- meetings cf -->

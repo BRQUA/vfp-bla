@@ -1,0 +1,1016 @@
+{
+  "config" : {
+    "btnColors" : "time-slot",
+    "logging" : false,
+    "mainBtnsDisabled" : false,
+    "mainResetBtn" : false
+  },
+  "hub" : {
+    "info" : {
+      "accTime" : 110,
+      "accTimeColor" : "chartreuse",
+      "actualGoal" : 25,
+      "actualTakt" : 130,
+      "lastStep" : 1481229495869,
+      "staticTakt" : 130,
+      "weeklyGoal" : 30
+    },
+    "name" : "Hub",
+    "status" : "Stopped",
+    "subs" : {
+      "HB1" : {
+        "dual" : true,
+        "name" : "HB1",
+        "opStyle" : "time-slot-op",
+        "second" : "HB2",
+        "style" : "time-slot",
+        "trigger" : false
+      },
+      "HB2" : {
+        "dual" : true,
+        "name" : "HB2",
+        "opStyle" : "time-slot-op",
+        "second" : "HB1",
+        "style" : "time-slot",
+        "trigger" : false
+      },
+      "HB3" : {
+        "dual" : true,
+        "name" : "HB3",
+        "opStyle" : "time-slot-op",
+        "second" : "HB4",
+        "style" : "time-slot",
+        "trigger" : false
+      },
+      "HB4" : {
+        "dual" : true,
+        "name" : "HB4",
+        "opStyle" : "time-slot-op",
+        "second" : "HB3",
+        "style" : "time-slot",
+        "trigger" : false
+      },
+      "HB5" : {
+        "name" : "HB5",
+        "opStyle" : "time-slot-op",
+        "style" : "time-slot",
+        "trigger" : false
+      },
+      "HB6" : {
+        "2nd" : "HB7",
+        "dual" : true,
+        "name" : "HB6",
+        "opStyle" : "time-slot-op",
+        "style" : "time-slot",
+        "trigger" : false
+      },
+      "HB7" : {
+        "counter" : true,
+        "dual" : true,
+        "name" : "HB7",
+        "opStyle" : "time-slot-op",
+        "second" : "HB6",
+        "style" : "time-slot",
+        "trigger" : false
+      }
+    },
+    "supps" : {
+      "L" : {
+        "name" : "L",
+        "trigger" : false
+      },
+      "M" : {
+        "name" : "M",
+        "trigger" : false
+      },
+      "Q" : {
+        "name" : "Q",
+        "trigger" : false
+      },
+      "TS" : {
+        "name" : "TS",
+        "trigger" : false
+      }
+    }
+  },
+  "log" : {
+    "-KYBC4K567U6uoPmP4ai" : {
+      "Area" : "HB1",
+      "Support" : "Q",
+      "Time" : 0.0666668,
+      "Timestamp" : 1480894732429
+    },
+    "-KYCQLEZ0GYht0TBve07" : {
+      "Area" : "BH",
+      "Support" : "L",
+      "Time" : 0.11666690000000002,
+      "Timestamp" : 1480915248209
+    },
+    "-KYCU_kouJJb2e5t0F_t" : {
+      "Area" : "BH",
+      "Support" : "TS",
+      "Time" : 0.2833339,
+      "Timestamp" : 1480916360333
+    },
+    "-KYCV85LEs412_soMq6d" : {
+      "Area" : "BH",
+      "Support" : "L",
+      "Time" : 0.3000006,
+      "Timestamp" : 1480916505079
+    },
+    "-KYCVGuZu1M8UIbwNjJt" : {
+      "Area" : "MS",
+      "Support" : "Q",
+      "Time" : 0.0833335,
+      "Timestamp" : 1480916541179
+    },
+    "-KYCVQ6NtMxXik9aAcBb" : {
+      "Area" : "MS",
+      "Support" : "L",
+      "Time" : 0.26666720000000005,
+      "Timestamp" : 1480916578858
+    },
+    "-KYCWAsEE2VAR6CNKD2m" : {
+      "Area" : "MS",
+      "Support" : "L",
+      "Time" : 0.5833345,
+      "Timestamp" : 1480916778598
+    },
+    "-KYCWPTrPWiiddMmWBFa" : {
+      "Area" : "BH",
+      "Support" : "TS",
+      "Time" : 0.4500008999999998,
+      "Timestamp" : 1480916838404
+    },
+    "-KYEBCz3XTdQPX0CM1af" : {
+      "Area" : "BH",
+      "Support" : "L",
+      "Time" : 0.13333360000000002,
+      "Timestamp" : 1480944836747
+    },
+    "-KYEBFd_8PjM6WbQLIHU" : {
+      "Area" : "MS",
+      "Support" : "Q",
+      "Time" : 0.13333360000000002,
+      "Timestamp" : 1480944847657
+    },
+    "-KYEBd_m8u3iYUF3Eu1w" : {
+      "Area" : "FA3",
+      "Support" : "Q",
+      "Time" : 0.0166667,
+      "Timestamp" : 1480944950015
+    },
+    "-KYECRf8117S9hG_9q4r" : {
+      "Area" : "FA3",
+      "Support" : "L",
+      "Time" : 0.21666710000000006,
+      "Timestamp" : 1480945159085
+    },
+    "-KYEFlniyyZRBxgUEbjr" : {
+      "Area" : "HB6",
+      "Support" : "TS",
+      "Time" : 3,
+      "Timestamp" : 1480946031903
+    },
+    "-KYEFmS7fq3kCAqcEGby" : {
+      "Area" : "HB7",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1480946034554
+    },
+    "-KYEf5kTsD5sgrmEIc97" : {
+      "Area" : "HB7",
+      "Support" : "Q",
+      "Time" : 3,
+      "Timestamp" : 1480952933459
+    },
+    "-KYEf76xIEo-H-cGTUS1" : {
+      "Area" : "HB6",
+      "Support" : "Q",
+      "Time" : 1,
+      "Timestamp" : 1480952939054
+    },
+    "-KYElLRgmr6XZ2hn7k4i" : {
+      "Area" : "FA3",
+      "Support" : "L",
+      "Time" : 0.0500001,
+      "Timestamp" : 1480954570681
+    },
+    "-KYErSXnXRWXsEt0IGV6" : {
+      "Area" : "HB7",
+      "Support" : "L",
+      "Time" : 0.0166667,
+      "Timestamp" : 1480956172510
+    },
+    "-KYErTNcpcpc4ofrmSdT" : {
+      "Area" : "HB6",
+      "Support" : "L",
+      "Time" : 0.0166667,
+      "Timestamp" : 1480956175978
+    },
+    "-KYFliQAy_9ygAWkG7bU" : {
+      "Area" : "FA1",
+      "Support" : "TS",
+      "Time" : 0.33333399999999996,
+      "Timestamp" : 1480971446004
+    },
+    "-KYFln7n0K1eCzSAL10u" : {
+      "Area" : "FA1",
+      "Support" : "TS",
+      "Time" : 0.0833335,
+      "Timestamp" : 1480971465308
+    },
+    "-KYFrKVvwX1WCOuOQ8HE" : {
+      "Area" : "FA3",
+      "Support" : "Q",
+      "Time" : 0.15000030000000003,
+      "Timestamp" : 1480972916867
+    },
+    "-KYFt9Jw_B8pZwORUI5a" : {
+      "Area" : "HB3",
+      "Support" : "TS",
+      "Time" : 0.0166667,
+      "Timestamp" : 1480973395318
+    },
+    "-KYFt9xOBODnCjkGyH44" : {
+      "Area" : "HB3",
+      "Support" : "Q",
+      "Time" : 0.0166667,
+      "Timestamp" : 1480973397903
+    },
+    "-KYFtGDXn5HhA-bHHHcI" : {
+      "Area" : "HB7",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1480973423560
+    },
+    "-KYFxjmMzVdYmKP5Ff4K" : {
+      "Area" : "HB7",
+      "Support" : "TS",
+      "Time" : 0.0333334,
+      "Timestamp" : 1480974597311
+    },
+    "-KYG2r0BsMnTtp0f3_Nb" : {
+      "Area" : "FA1",
+      "Support" : "TS",
+      "Time" : 0.16666700000000004,
+      "Timestamp" : 1480976199798
+    },
+    "-KYG3g7nVYqYqFuGCi74" : {
+      "Area" : "FA1",
+      "Support" : "L",
+      "Time" : 0.16666700000000004,
+      "Timestamp" : 1480976428272
+    },
+    "-KYGDWu0WMWsH_ZVJxga" : {
+      "Area" : "HB3",
+      "Support" : "TS",
+      "Time" : 0.16666700000000004,
+      "Timestamp" : 1480978996957
+    },
+    "-KYGc94zp5L97UE7deh8" : {
+      "Area" : "HB3",
+      "Support" : "TS",
+      "Time" : 0.0166667,
+      "Timestamp" : 1480985715134
+    },
+    "-KYGcAXM1Dh_7jbCad6-" : {
+      "Area" : "HB4",
+      "Support" : "TS",
+      "Time" : 0.0166667,
+      "Timestamp" : 1480985721063
+    },
+    "-KYGcAywh0PQ63RUOOGT" : {
+      "Area" : "HB3",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1480985722891
+    },
+    "-KYGcDgOzgh_PUIqzOxT" : {
+      "Area" : "FE3",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1480985733991
+    },
+    "-KYJIJTMYVFjQA0d-qEA" : {
+      "Area" : "FA3",
+      "Support" : "TS",
+      "Time" : 0.0166667,
+      "Timestamp" : 1481030584548
+    },
+    "-KYJINFH3sYJohPkMXhT" : {
+      "Area" : "FA3",
+      "Support" : "M",
+      "Time" : 0.0333334,
+      "Timestamp" : 1481030600039
+    },
+    "-KYJlEkY47a6PSmFVphT" : {
+      "Area" : "HB1",
+      "Support" : "TS",
+      "Time" : 0.0500001,
+      "Timestamp" : 1481038429284
+    },
+    "-KYJtcrhn1jUu14e-6j7" : {
+      "Area" : "FA2",
+      "Support" : "TS",
+      "Time" : 0.23333380000000006,
+      "Timestamp" : 1481040629347
+    },
+    "-KYJtmqf6DZAZBCS44oU" : {
+      "Area" : "FA2",
+      "Support" : "TS",
+      "Time" : 0.4666675999999998,
+      "Timestamp" : 1481040670302
+    },
+    "-KYJw0tAGa-_4MzqE0y9" : {
+      "Area" : "HB1",
+      "Support" : "Q",
+      "Time" : 0.33333399999999996,
+      "Timestamp" : 1481041256126
+    },
+    "-KYJyZGdUxfgkDIJCfkz" : {
+      "Area" : "FG3",
+      "Support" : "TS",
+      "Time" : 0.0333334,
+      "Timestamp" : 1481041921168
+    },
+    "-KYJygrbxz2AI5jYsVCg" : {
+      "Area" : "FG3",
+      "Support" : "TS",
+      "Time" : 0.20000040000000005,
+      "Timestamp" : 1481041956366
+    },
+    "-KYKAWI0LdmniRq2T3WL" : {
+      "Area" : "RF1",
+      "Support" : "TS",
+      "Time" : 0.0666668,
+      "Timestamp" : 1481045317001
+    },
+    "-KYKAXKN_rxEMx9bm8ct" : {
+      "Area" : "RF1",
+      "Support" : "L",
+      "Time" : 0.0333334,
+      "Timestamp" : 1481045321293
+    },
+    "-KYKCnfQsRhbrxGPXhM8" : {
+      "Area" : "RF1",
+      "Support" : "TS",
+      "Time" : 0.0833335,
+      "Timestamp" : 1481045916502
+    },
+    "-KYKcgBFZkaH-_S6PWsQ" : {
+      "Area" : "HB1",
+      "Support" : "Q",
+      "Time" : 0.0333334,
+      "Timestamp" : 1481052963653
+    },
+    "-KYKfivwgmcEFyO99JCt" : {
+      "Area" : "FE2",
+      "Support" : "Q",
+      "Time" : 0.0666668,
+      "Timestamp" : 1481053761344
+    },
+    "-KYKfjXZdtZK7eQYNBFu" : {
+      "Area" : "FE2",
+      "Support" : "TS",
+      "Time" : 0.0166667,
+      "Timestamp" : 1481053763811
+    },
+    "-KYKfkcln7BiQKeZn2ur" : {
+      "Area" : "FE2",
+      "Support" : "L",
+      "Time" : 0.0333334,
+      "Timestamp" : 1481053768310
+    },
+    "-KYKfm8pXJl-8tMx1GWu" : {
+      "Area" : "FE2",
+      "Support" : "M",
+      "Time" : 0.0666668,
+      "Timestamp" : 1481053774519
+    },
+    "-KYNxQAE0FRuGrWUjUe7" : {
+      "Area" : "FA3",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481108730631
+    },
+    "-KYNxdVPsjK7Xko6mAsa" : {
+      "Area" : "HB7",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481108789330
+    },
+    "-KYOOb7boLa-z4WU9ZWp" : {
+      "Area" : "FA3",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481116119689
+    },
+    "-KYOOe0RmvZG9hNgTj4i" : {
+      "Area" : "FA3",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481116131479
+    },
+    "-KYOP-2m_zCP6TZeDiH0" : {
+      "Area" : "HB7",
+      "Support" : "TS",
+      "Time" : 0.5,
+      "Timestamp" : 1481116221761
+    },
+    "-KYOPGotD9pk-KsQ6SL-" : {
+      "Area" : "HB7",
+      "Support" : "TS",
+      "Time" : 0.5,
+      "Timestamp" : 1481116294509
+    },
+    "-KYOPRsRY8Px37nGo7KQ" : {
+      "Area" : "HB7",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481116343716
+    },
+    "-KYOPUy938X8n95brcYv" : {
+      "Area" : "HB6",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481116352439
+    },
+    "-KYOPW6FP-oEesJqA4b9" : {
+      "Area" : "HB6",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481116357121
+    },
+    "-KYOVphfw6NKyEiZ_PT5" : {
+      "Area" : "FA3",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481118014393
+    },
+    "-KYOVqLEj4Nt0jVbVuNN" : {
+      "Area" : "FA3",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481118016984
+    },
+    "-KYOXTbtxVmIsqf1pjPR" : {
+      "Area" : "HB1",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481118444098
+    },
+    "-KYOa97PJeu3XoPANzpn" : {
+      "Area" : "FA3",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481119408740
+    },
+    "-KYOktpUEnyTbshPNkkO" : {
+      "Area" : "FA3",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481122225643
+    },
+    "-KYOvzfFyzjFp2v7VpSS" : {
+      "Area" : "FA3",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481125133222
+    },
+    "-KYOw-y8GdJDv3KUkz06" : {
+      "Area" : "FA3",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481125138456
+    },
+    "-KYOw5Lt9FKJwRaTBZMr" : {
+      "Area" : "FA3",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481125160521
+    },
+    "-KYOw9IUAyTuT9qs5Flz" : {
+      "Area" : "FA3",
+      "Support" : "M",
+      "Time" : 0,
+      "Timestamp" : 1481125176682
+    },
+    "-KYOwxH619eBWK0CdGiz" : {
+      "Area" : "FA3",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481125385520
+    },
+    "-KYOxvND6n3oZTbjhsWi" : {
+      "Area" : "FA3",
+      "Support" : "Q",
+      "Time" : 0.5,
+      "Timestamp" : 1481125639904
+    },
+    "-KYP0TdK2TYOO_6fBbMM" : {
+      "Area" : "RF3",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481126570715
+    },
+    "-KYP0fk9aPdSDVp5wW9p" : {
+      "Area" : "RF3",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481126624405
+    },
+    "-KYP3ioDV4wGgn4YCCTg" : {
+      "Area" : "HB4",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481127423293
+    },
+    "-KYPDKegXhwhXX8QgJSc" : {
+      "Area" : "FA3",
+      "Support" : "L",
+      "Time" : 32,
+      "Timestamp" : 1481129941718
+    },
+    "-KYPgIV0_9_edUX1pHLv" : {
+      "Area" : "HB4",
+      "Support" : "M",
+      "Time" : 0,
+      "Timestamp" : 1481137797173
+    },
+    "-KYPgJeD-ar9xvs7bwE8" : {
+      "Area" : "HB4",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481137801922
+    },
+    "-KYPgLC-R7A5ICn-cP81" : {
+      "Area" : "HB4",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481137808247
+    },
+    "-KYPgMGhMM76dePOAtpH" : {
+      "Area" : "HB4",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481137812635
+    },
+    "-KYPgQ-JnSJ5MYPb58vz" : {
+      "Area" : "HB4",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481137827910
+    },
+    "-KYPguI4HoMTMn3EmBer" : {
+      "Area" : "HB3",
+      "Support" : "L",
+      "Time" : 1,
+      "Timestamp" : 1481137956086
+    },
+    "-KYPgwynYmgTNCTYGAwF" : {
+      "Area" : "HB4",
+      "Support" : "M",
+      "Time" : 0,
+      "Timestamp" : 1481137967077
+    },
+    "-KYPhGifUTdEBBa7FE1p" : {
+      "Area" : "HB4",
+      "Support" : "M",
+      "Time" : 1,
+      "Timestamp" : 1481138056826
+    },
+    "-KYPhHWNje4N4z91uMXz" : {
+      "Area" : "HB4",
+      "Support" : "M",
+      "Time" : 0,
+      "Timestamp" : 1481138056871
+    },
+    "-KYPhI1yYghfZSzBDBId" : {
+      "Area" : "HB4",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481138057456
+    },
+    "-KYPiF8kgd6KVU4TGhTe" : {
+      "Area" : "HB4",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481138307743
+    },
+    "-KYPiGGuQKjijP34YM-7" : {
+      "Area" : "HB4",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481138312361
+    },
+    "-KYPiIG38hBJXx4FNUTB" : {
+      "Area" : "HB4",
+      "Support" : "M",
+      "Time" : 0,
+      "Timestamp" : 1481138320508
+    },
+    "-KYPrNqDYhCk7KTGYEyg" : {
+      "Area" : "HB4",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481140702748
+    },
+    "-KYPrhsFaw-vKbJqepoV" : {
+      "Area" : "FA2",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481140788890
+    },
+    "-KYPrse1GZWYjdjIPKLz" : {
+      "Area" : "FA2",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481140833033
+    },
+    "-KYPrwhZecYvX7yyyvwy" : {
+      "Area" : "FA2",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481140849654
+    },
+    "-KYPrxij5TPsVEceUyOz" : {
+      "Area" : "FA2",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481140853815
+    },
+    "-KYPrzaD4vf3vW2A2DUX" : {
+      "Area" : "FA2",
+      "Support" : "M",
+      "Time" : 0,
+      "Timestamp" : 1481140861463
+    },
+    "-KYPsJanVezvMi0AAsWU" : {
+      "Area" : "FA2",
+      "Support" : "M",
+      "Time" : 0,
+      "Timestamp" : 1481140947519
+    },
+    "-KYPt7UH56SgF-o1YOPj" : {
+      "Area" : "FA2",
+      "Support" : "M",
+      "Time" : 0,
+      "Timestamp" : 1481141159937
+    },
+    "-KYPtAj6NHCJrI1vIyg8" : {
+      "Area" : "FA2",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481141173237
+    },
+    "-KYPtBbrzN11P7nBh9Mw" : {
+      "Area" : "FA2",
+      "Support" : "M",
+      "Time" : 0,
+      "Timestamp" : 1481141176868
+    },
+    "-KYPtCXDJ8RXQMhKZWsD" : {
+      "Area" : "FA2",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481141180602
+    },
+    "-KYPtDc-N6l1AxVg6S7g" : {
+      "Area" : "FA2",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481141185069
+    },
+    "-KYPtEWKqSh8qwYz67uF" : {
+      "Area" : "FA2",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481141188739
+    },
+    "-KYQBAGSXKVxoAcuJkah" : {
+      "Area" : "HB7",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481146152083
+    },
+    "-KYQBBAJDgTXIxZEJMaL" : {
+      "Area" : "HB7",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481146155798
+    },
+    "-KYQBCK9Dr04tVht1D_z" : {
+      "Area" : "HB7",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481146160542
+    },
+    "-KYQBDNDLED-ssEIviUd" : {
+      "Area" : "HB7",
+      "Support" : "M",
+      "Time" : 0,
+      "Timestamp" : 1481146164835
+    },
+    "-KYQBfmSdq0rA5dBe0vr" : {
+      "Area" : "TB1",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481146285266
+    },
+    "-KYQBpg-y2jXnKzYDTUb" : {
+      "Area" : "TB1",
+      "Support" : "L",
+      "Time" : 0.5,
+      "Timestamp" : 1481146325837
+    },
+    "-KYQC69RyC_9W1LALFl5" : {
+      "Area" : "TB1",
+      "Support" : "Q",
+      "Time" : 1,
+      "Timestamp" : 1481146397681
+    },
+    "-KYQCLmWdpSoovywihr4" : {
+      "Area" : "TB1",
+      "Support" : "Q",
+      "Time" : 0.5,
+      "Timestamp" : 1481146461396
+    },
+    "-KYRSuvWIwBONGo_xL3V" : {
+      "Area" : "HB7",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481167581105
+    },
+    "-KYTdIihdCpBG1jbpww0" : {
+      "Area" : "HB7",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481204120542
+    },
+    "-KYTdK0pL8yNjVGywZpz" : {
+      "Area" : "HB7",
+      "Support" : "M",
+      "Time" : 0,
+      "Timestamp" : 1481204125864
+    },
+    "-KYTh3qm8twcDh0WsW45" : {
+      "Area" : "RF1",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481205108215
+    },
+    "-KYU72Rk-42W5QqRpFt6" : {
+      "Area" : "HB7",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481212180322
+    },
+    "-KYU72oxgOwgdEGzNE2P" : {
+      "Area" : "HB7",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481212181865
+    },
+    "-KYU78BU1DNqz2PrzDG1" : {
+      "Area" : "HB7",
+      "Support" : "L",
+      "Time" : 0,
+      "Timestamp" : 1481212203853
+    },
+    "-KYV2qXOQsAEQY-30_4c" : {
+      "Area" : "TB3",
+      "Support" : "Q",
+      "Time" : 0,
+      "Timestamp" : 1481227856223
+    },
+    "-KYWsVKsBVihVUFKWapb" : {
+      "Area" : "HB7",
+      "Support" : "TS",
+      "Time" : 0,
+      "Timestamp" : 1481258436018
+    }
+  },
+  "nacelle" : {
+    "areas" : {
+      "DT" : {
+        "name" : "DT",
+        "subs" : {
+          "BH" : {
+            "dual" : true,
+            "name" : "BH",
+            "opStyle" : "time-slot-op",
+            "second" : "MS",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "GB" : {
+            "name" : "GB",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "MS" : {
+            "dual" : true,
+            "name" : "MS",
+            "opStyle" : "time-slot-op",
+            "second" : "BH",
+            "style" : "time-slot",
+            "trigger" : false
+          }
+        }
+      },
+      "FA" : {
+        "name" : "FA",
+        "subs" : {
+          "FA1" : {
+            "name" : "FA1",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "FA2" : {
+            "name" : "FA2",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "FA3" : {
+            "counter" : true,
+            "name" : "FA3",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "timer" : true,
+            "trigger" : false
+          }
+        }
+      },
+      "FE" : {
+        "name" : "FE",
+        "subs" : {
+          "FE1" : {
+            "dual" : true,
+            "name" : "FE2",
+            "opStyle" : "time-slot-op",
+            "second" : "FE2",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "FE2" : {
+            "dual" : true,
+            "name" : "FE2",
+            "opStyle" : "time-slot-op",
+            "second" : "FE1",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "FE3" : {
+            "dual" : true,
+            "name" : "FE3",
+            "opStyle" : "time-slot-op",
+            "second" : "FE4",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "FE4" : {
+            "dual" : true,
+            "name" : "FE4",
+            "opStyle" : "time-slot-op",
+            "second" : "FE3",
+            "style" : "time-slot",
+            "trigger" : false
+          }
+        }
+      },
+      "FFT" : {
+        "name" : "FFT",
+        "subs" : {
+          "TB1" : {
+            "name" : "TB1",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "TB2" : {
+            "name" : "TB2",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "TB3" : {
+            "name" : "TB3",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "TB4" : {
+            "name" : "TB4",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          }
+        }
+      },
+      "FG" : {
+        "name" : "FG",
+        "subs" : {
+          "FG1" : {
+            "name" : "FG1",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "FG2" : {
+            "name" : "FG2",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "FG3" : {
+            "counter" : true,
+            "name" : "FG3",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          }
+        }
+      },
+      "RF" : {
+        "name" : "RF",
+        "subs" : {
+          "RF1" : {
+            "dual" : true,
+            "name" : "RF1",
+            "opStyle" : "time-slot-op",
+            "second" : "RF2",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "RF2" : {
+            "dual" : true,
+            "name" : "RF2",
+            "opStyle" : "time-slot-op",
+            "second" : "RF1",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "RF3" : {
+            "name" : "RF3",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          },
+          "RF4" : {
+            "name" : "RF4",
+            "opStyle" : "time-slot-op",
+            "style" : "time-slot",
+            "trigger" : false
+          }
+        }
+      }
+    },
+    "info" : {
+      "accTime" : 150.5,
+      "accTimeColor" : "chartreuse",
+      "actualGoal" : 27,
+      "actualTakt" : 130,
+      "lastStep" : 1481229344682,
+      "staticTakt" : 130,
+      "weeklyGoal" : 30
+    },
+    "name" : "Nacelle",
+    "status" : "Stopped",
+    "supps" : {
+      "L" : {
+        "name" : "L",
+        "trigger" : false
+      },
+      "M" : {
+        "name" : "M",
+        "trigger" : false
+      },
+      "Q" : {
+        "name" : "Q",
+        "trigger" : false
+      },
+      "TS" : {
+        "name" : "TS",
+        "trigger" : false
+      }
+    }
+  },
+  "supps" : {
+    "L" : {
+      "name" : "L"
+    },
+    "M" : {
+      "name" : "M"
+    },
+    "Q" : {
+      "name" : "Q"
+    },
+    "TS" : {
+      "name" : "TS"
+    }
+  }
+}

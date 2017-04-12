@@ -1,0 +1,105 @@
+<section onTouchstart="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-fluid">
+                <div class=""> <a href="#/main/" class="">&lt;&lt; Main Screen </a> <a href="#/hub">&lt; Area Screen </a> </div>
+            </div>
+        
+        <!-----------------------Single user buttons------------------------>
+        <h1>{{userItem}} User Screen</h1>
+        <div ng-show="showElapsedTime">
+            <h2 style="color: yellow; text-align:center;">{{suppUser}} {{suppTrig}} Activated</h2>
+            <h3 style="color: yellow; text-align:center;">Elapsed Time: {{elapsedTime | number:1}} minutes</h3> </div>
+            </div>
+        <div class="row">
+            <!--Support Buttons 1-->
+            <div class="col-sm-4">
+                <div class="container-fluid">
+                    <h2>{{userItem}}</h2>
+                    <button type="button" class="btn1 btn" ng-click="suppTrigger(userItem,'TS')">TS</button>
+                    <button type="button" class="btn2 btn" ng-click="suppTrigger(userItem,'Q')">Q</button>
+                    <button type="button" class="btn3 btn" ng-click="suppTrigger(userItem,'L')">L</button>
+                    <button type="button" class="btn4 btn" ng-click="suppTrigger(userItem,'M')">M</button>
+                </div>
+            </div>
+            <!--Hub Takt Information -->
+            <div class="hidden-xs col-sm-4">
+                <div class="container-fluid" id="hubInfo">
+                    <h1>Hub</h1>
+                    <table>
+                        <tr>
+                            <td>Takt Time</td>
+                            <td>{{hubInfo.staticTakt | number:1}}</td>
+                        </tr>
+                        <tr>
+                            <td>Actual Takt</td>
+                            <td>{{hubInfo.actualTakt | number:1}}</td>
+                        </tr>
+                        <tr>
+                            <td>Accumulated</td>
+                            <td style="color:{{hub.info.accTimeColor}};">{{hubInfo.accTime | number:1}}</td>
+                        </tr>
+                        <tr>
+                            <td>Actual</td>
+                            <td>{{hubInfo.actualGoal}}</td>
+                        </tr>
+                        <tr>
+                            <td>Goal</td>
+                            <td>{{hubInfo.weeklyGoal}}</td>
+                        </tr>
+                        <tr>
+                            <td>Last Step</td>
+                            <td>{{hubInfo.lastStep | date:'shortTime'}}</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td class="{{hub.status}}">{{hub.status}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--Support Buttons 2-->
+            <div class="col-sm-4" id="">
+                <div class="container-fluid">
+                    <div ng-show="subs[userItem].dual" id="" onTouchstart="">
+                        <h2 style="color:white; text-align: center;">{{subs[userItem].second}}</h2>
+                        <!--      suppTrigger(subs[userItem].second-->
+                        <button type="button" class="btn1 btn" ng-click="suppTrigger(subs[userItem].second,'TS')">TS</button>
+                        <button type="button" class="btn2 btn" ng-click="suppTrigger(subs[userItem].second,'Q')">Q</button>
+                        <button type="button" class="btn3 btn" ng-click="suppTrigger(subs[userItem].second,'L')">L</button>
+                        <button type="button" class="btn4 btn" ng-click="suppTrigger(subs[userItem].second,'M')">M</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Hub counter -->
+        <div class="row">
+            <div class="container">
+                <div ng-show="subs[userItem].counter">
+                    <div style="text-align: center;">
+                        <button class="btn5 btn" ng-click="hubCountUp()">Count up</button>
+                        <button class="btn6 btn" ng-click="hubCountDown()">Count down</button>
+<!--                        <button ng-disabled="hubResetBtn" type="button" class="btn6 btn" data-ng-click="hubTaktReset()">Reset</button>-->
+                    </div>
+                    <!--        Takt Counter-->
+                </div>
+            </div>
+        </div>
+         <div class="row">
+            <div class="container">
+                    <!--        Takt Counter-->
+                <div ng-show="subs[userItem].timer">
+                    <div style="text-align: center;">
+                        <button ng-hide="config.autoTakt" ng-disabled="hubStartBtn" type="button" class="btn7 btn" data-ng-click="hubTaktStart()">Start</button>
+                        <button ng-hide="config.autoTakt" ng-disabled="hubPauseBtn"type="button" class="btn7 btn" data-ng-click="hubTaktPause()">Pause</button>
+                        <button ng-hide="config.autoTakt" ng-disabled="hubStopBtn" type="button" class="btn7 btn" data-ng-click="hubTaktStop()">Stop</button>
+                        <button ng-show="config.autoTakt" ng-disabled="hubStartBtn" type="button" class="btn7 btn" data-ng-click="hubStartTakt()">Start</button>
+<!--                        <button ng-disabled="hubPauseBtn"type="button" class="btn7 btn" data-ng-click="hubTaktPause()">Pause</button>-->
+                        <button ng-show="config.autoTakt" ng-disabled="hubStopBtn" type="button" class="btn7 btn" data-ng-click="hubStopTakt()">Stop</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

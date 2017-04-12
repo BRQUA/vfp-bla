@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="visDispApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Vestas Factory Portal - Brighton Nacelles</title>
+<!-- CSS -->
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/area.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+    <!--CSS for the User screen-->
+    <link rel="stylesheet" href="css/User.css">
+    <!--    <link rel="stylesheet" href="css/User2.css">-->
+<!--    <link rel="stylesheet" href="css/mainLayout.css">-->
+    
+    <link rel="stylesheet" href="css/reportingpage.css">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" />
+    
+<!-- JS -->
+    <!--ANGLUAR-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+<!--    <script src="lib/angular/angular-animate.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-sanitize.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.5.9/angular-touch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular-animate.min.js"></script>
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
+   
+    <!--FIREBASE    -->
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/alasql/0.3.4/alasql.min.js"></script>-->
+    
+    <!--ui-grid Scripts-->
+    
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>-->
+
+    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+    
+    <script src=" https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css">
+    
+   
+<!--ng-Table-->
+<link rel="stylesheet"; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+<script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+    
+    <!-- Local Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/authentication.js"></script>
+    <script src="js/angular-openweathermap.js"></script>
+    <script src="https://use.fontawesome.com/0b054ca8da.js"></script>
+</head>
+
+<body>
+    <div class="header" ng-include="'partials/nav.html'"></div>
+    <div ng-view></div>
+</body>
+<div class="footer"><a href="#/login">TᴎA 0.1</a></div>
+
+</html>

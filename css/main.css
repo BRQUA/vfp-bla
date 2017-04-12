@@ -1,0 +1,1089 @@
+/* # = id, . = class  p = element*/
+
+/*Common CSS*/
+
+/*Production Status*/
+.Stopped {
+    color: red;
+}
+.Paused {
+    color:yellow;
+}
+.Running {
+    color:chartreuse;
+}
+
+.time-slot a:link {text-decoration:none; color: black;}
+.time-slot a:visited {text-decoration:none; color:black;}
+.time-slot a:active {text-decoration:none; color:black;}
+
+.L a:link {text-decoration:none; color: black;}
+.L a:visited {text-decoration:none; color:black;}
+.L a:active {text-decoration:none; color:black;} 
+
+.Q a:link {text-decoration:none; color: black;}
+.Q a:visited {text-decoration:none; color:black;}
+.Q a:active {text-decoration:none; color:black;}
+
+.TS a:link {text-decoration:none; color: black;}
+.TS a:visited {text-decoration:none; color:black;}
+.TS a:active {text-decoration:none; color:black;}
+
+.M a:link {text-decoration:none; color: black;}
+.M a:visited {text-decoration:none; color:black;}
+.M a:active {text-decoration:none; color:black;}
+/*Font color for area screen labels*/
+a:link {text-decoration:none; color: white;}
+a:visited {text-decoration:none; color:white;}
+a:active {text-decoration:none; color:white;}
+
+/*Border and font size for infoStyle*/
+#infoStyle td {
+  border: solid 3px black;
+}
+
+/*End Common CSS*/
+
+/*Media Queries for each screen size*/
+
+/*Extra small devices Phones (<768px)*/
+@media screen and (min-width:100px) and (max-width:767px){
+    
+/*Hub, Nac, Count and Weather Information Items*/
+#infoStyle {
+    font-size: 20px;
+    text-align: center;
+    background-color:#141414;
+    color:white;
+    width:100%;
+}
+
+    #timeStyle {
+    font-size: 20px;
+    text-align: center;
+    background-color:#141414;
+    color:white;
+    width:100%;
+}
+
+
+
+/*Area container*/
+#areaContainer {
+    background-color: #222222;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+}
+
+/*Support button labels - All*/
+#suppBtns input {
+    display: none;
+}
+#suppBtns label {
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 3px;
+    font-size: 20px;
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+/*Colored Support Buttons*/
+.L {}
+.Q {}
+.M {}
+.TS {}
+
+.L input {
+    display: none;
+}
+.Q input {
+    display: none;
+}
+.M input {
+    display: none;
+}
+.TS input {
+    display: none;
+}
+
+.L label {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.M label {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.Q label {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.TS label {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+
+
+/*L Blue themed buttons*/
+.L input:not(:checked) ~ label {
+    background:blue;
+    animation: flashAvailable 0.5s ease;
+}
+.L input:checked ~ label {
+    background: blue;
+/*    color: white;*/
+    animation: flashBooked 0.5s ease;
+    -webkit-animation-name: lColor; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: lColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes lColor {
+    0%   {background-color:blue;}
+    25%  {background-color:white;}
+    50%  {background-color:blue;}
+    75%  {background-color:white;}
+    100% {background-color:blue; }
+}
+/* Standard syntax */
+@keyframes lColor {
+    0%   {background-color:blue;}
+    25%  {background-color:white;}
+    50%  {background-color:blue;}
+    75%  {background-color:white;}
+    100% {background-color:blue;}
+}
+/* Q Green themed buttons*/
+.Q input:not(:checked) ~ label {
+    background: chartreuse;
+    animation: flashAvailable 0.5s ease;
+}
+.Q input:checked ~ label {
+    background: chartreuse;
+    animation: flashBooked 0.5s ease;
+    -webkit-animation-name: qColor; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: qColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes qColor {
+    0%   {background-color:chartreuse;}
+    25%  {background-color:white;}
+    50%  {background-color:chartreuse;}
+    75%  {background-color:white;}
+    100% {background-color:chartreuse; }
+}
+/* Standard syntax */
+@keyframes qColor {
+    0%   {background-color:chartreuse;}
+    25%  {background-color:white;}
+    50%  {background-color:chartreuse;}
+    75%  {background-color:white;}
+    100% {background-color:chartreuse;}
+}
+/* M Red themed buttons*/
+.M input:not(:checked) ~ label {
+    background:red;
+    color:black;
+    animation: flashAvailable 0.5s ease;
+}
+.M input:checked ~ label {
+    background: red;
+    animation: flashBooked 0.5s ease;
+    -webkit-animation-name: mColor; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: mColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes mColor {
+    0%   {background-color:red;}
+    25%  {background-color:white;}
+    50%  {background-color:red;}
+    75%  {background-color:white;}
+    100% {background-color:red; }
+}
+/* Standard syntax */
+@keyframes mColor {
+    0%   {background-color:red;}
+    25%  {background-color:white;}
+    50%  {background-color:red;}
+    75%  {background-color:white;}
+    100% {background-color:red;}
+}
+
+/*TS Purple themed buttons*/
+.TS input:not(:checked) ~ label {
+    background: yellow;
+    color:black;
+    animation: flashAvailable 0.5s ease;
+    
+/*    animation: flashAvailable 0.5s ease;*/
+}
+.TS input:checked ~ label {
+    background: yellow;
+    animation: flashBooked 0.5s ease;
+    -webkit-animation-name: tsColor; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: tsColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes tsColor {
+    0%   {background-color:yellow;}
+    25%  {background-color:white;}
+    50%  {background-color:yellow;}
+    75%  {background-color:white;}
+    100% {background-color:yellow; }
+}
+/* Standard syntax */
+@keyframes tsColor {
+    0%   {background-color:yellow;}
+    25%  {background-color:white;}
+    50%  {background-color:yellow;}
+    75%  {background-color:white;}
+    100% {background-color:yellow;}
+}
+
+/*Orange Themed buttons*/
+.time-slot {}
+.time-slot input {
+    display: none;
+}
+.time-slot label {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.time-slot input:checked ~ label {
+    color:black;
+    background: white;
+    animation: flashBooked 0.5s ease;
+}
+.time-slot input:not(:checked) ~ label {
+    color:black;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+    animation: flashAvailable 0.5s ease;
+}
+
+
+/* animation for the time slot to flash grey */
+@keyframes flashAvailable {
+    0%,
+    100% {
+        background: white;
+        transform: scale(1);
+    }
+    50% {
+        background: white;
+        transform: scale(1.5);
+    }
+}
+/* animation for the time slot to flash green */
+@keyframes flashBooked {
+    0%,
+    100% {
+        background: black;
+        transform: scale(1);
+    }
+    50% {
+        background: black;
+        transform: scale(1.5);
+    }
+}
+
+/*Footer styling*/
+.footer, .push {
+    font-size: 10px;
+    text-align: right;
+    color: yellow;
+}
+}
+/*Small devices Tablets (≥768px)*/
+@media screen and (min-width:768px) and (max-width:992px){
+
+/*Hub, Nac, Count and Weather Information Items*/
+#infoStyle {
+    font-size: 20px;
+    text-align: center;
+    background-color:#141414;
+    color:white;
+    width:100%;
+}
+    #timeStyle {
+    font-size: 20px;
+    text-align: center;
+    background-color:#141414;
+    color:white;
+    width:100%;
+}
+
+/*Area container*/
+#areaContainer {
+    background-color: #222222;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+}
+
+
+/*Support button labels - All*/
+#suppBtns input {
+    display: none;
+}
+#suppBtns label {
+    padding: 5px 5px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 3px;
+    font-size: 20px;
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.L {}
+.Q {}
+.M {}
+.TS {}
+
+.L input {
+    display: none;
+}
+.Q input {
+    display: none;
+}
+.M input {
+    display: none;
+}
+.TS input {
+    display: none;
+}
+
+.L label {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.M label {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.Q label {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.TS label {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+
+
+/*L Blue themed buttons*/
+.L input:not(:checked) ~ label {
+    background: blue;
+    animation: flashAvailable 0.5s ease;
+}
+.L input:checked ~ label {
+    background: blue;
+/*    color: white;*/
+    animation: flashBooked 0.5s ease;
+}
+
+/* Q Green themed buttons*/
+.Q input:not(:checked) ~ label {
+    background: chartreuse;
+    animation: flashAvailable 0.5s ease;
+}
+.Q input:checked ~ label {
+    background: chartreuse;
+    animation: flashBooked 0.5s ease;
+}
+
+/* M Red themed buttons*/
+.M input:not(:checked) ~ label {
+    background:red;
+    color:black;
+    animation: flashAvailable 0.5s ease;
+}
+.M input:checked ~ label {
+    background: red;
+    color: black;
+    animation: flashBooked 0.5s ease;
+}
+
+/*TS Purple themed buttons*/
+.TS input:not(:checked) ~ label {
+    background: yellow;
+    animation: flashAvailable 0.5s ease;
+}
+.TS input:checked ~ label {
+    background: yellow;
+    animation: flashBooked 0.5s ease;
+}
+
+
+/*Orange Themed buttons*/
+.time-slot {}
+.time-slot input {
+    display: none;
+}
+.time-slot label {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.time-slot input:checked ~ label {
+    color:black;
+    background: white;
+    animation: flashBooked 0.5s ease;
+}
+.time-slot input:not(:checked) ~ label {
+    color:black;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+    animation: flashAvailable 0.5s ease;
+}
+
+
+
+/* animation for the time slot to flash grey */
+@keyframes flashAvailable {
+    0%,
+    100% {
+        background: white;
+        transform: scale(1);
+    }
+    50% {
+        background: white;
+        transform: scale(1.5);
+    }
+}
+/* animation for the time slot to flash green */
+@keyframes flashBooked {
+    0%,
+    100% {
+        background: black;
+        transform: scale(1);
+    }
+    50% {
+        background: black;
+        transform: scale(1.5);
+    }
+}
+
+/*Footer styling*/
+.footer, .push {
+    font-size: 1em;
+    text-align: right;
+    color: yellow;
+}
+
+}
+/*Medium devices Desktops (≥992px)*/
+@media screen and (min-width:992px) and (max-width:1200px){
+
+/*Hub, Nac, Count and Weather Information Items*/
+#infoStyle {
+    font-size: 20px;
+    text-align: center;
+    background-color:#141414;
+    color:white;
+    width:100%;
+}
+    #timeStyle {
+    font-size: 20px;
+    text-align: center;
+    background-color:#141414;
+    color:white;
+    width:100%;
+}
+
+/*Area container*/
+#areaContainer {
+    background-color: #222222;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 30px;
+    color: white;
+}
+
+/*Support button labels - All*/
+#suppBtns input {
+    display: none;
+}
+#suppBtns label {
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 3px;
+    font-size: 20px;
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.L {}
+.Q {}
+.M {}
+.TS {}
+
+.L input {
+    display: none;
+}
+.Q input {
+    display: none;
+}
+.M input {
+    display: none;
+}
+.TS input {
+    display: none;
+}
+
+.L label {
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.M label {
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.Q label {
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.TS label {
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+
+/*L Blue themed buttons*/
+.L input:not(:checked) ~ label {
+    background: blue;
+    animation: flashAvailable 0.5s ease;
+}
+.L input:checked ~ label {
+    background: blue;
+/*    color: white;*/
+    animation: flashBooked 0.5s ease;
+}
+
+/* Q Green themed buttons*/
+.Q input:not(:checked) ~ label {
+    background: chartreuse;
+    animation: flashAvailable 0.5s ease;
+}
+.Q input:checked ~ label {
+    background: chartreuse;
+    animation: flashBooked 0.5s ease;
+}
+
+/* M red themed buttons*/
+.M input:not(:checked) ~ label {
+    background:red;
+    color:black;
+    animation: flashAvailable 0.5s ease;
+}
+.M input:checked ~ label {
+    background: red;
+    color: black;
+    animation: flashBooked 0.5s ease;
+}
+
+/*TS Purple themed buttons*/
+.TS input:not(:checked) ~ label {
+    background: yellow;
+    animation: flashAvailable 0.5s ease;
+}
+.TS input:checked ~ label {
+    background: yellow;
+    animation: flashBooked 0.5s ease;
+}
+
+
+/*Orange Themed buttons*/
+.time-slot {}
+.time-slot input {
+    display: none;
+}
+.time-slot label {
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 20px;
+    color:black;
+
+}
+.time-slot input:checked ~ label {
+    color:black;
+    background: white;
+    animation: flashBooked 0.5s ease;
+}
+.time-slot input:not(:checked) ~ label {
+    color:black;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+    animation: flashAvailable 0.5s ease;
+}
+
+
+
+/* animation for the time slot to flash grey */
+@keyframes flashAvailable {
+    0%,
+    100% {
+        background: white;
+        transform: scale(1);
+    }
+    50% {
+        background: white;
+        transform: scale(1.5);
+    }
+}
+/* animation for the time slot to flash green */
+@keyframes flashBooked {
+    0%,
+    100% {
+        background: black;
+        transform: scale(1);
+    }
+    50% {
+        background: black;
+        transform: scale(1.5);
+    }
+}
+
+/*Footer styling*/
+.footer, .push {
+    font-size: 1em;
+    text-align: right;
+    color: yellow;
+}
+
+}
+/*Large devices Desktops (≥1200px)*/
+@media screen and (min-width:1200px) and (max-width:1980px){
+
+/*Hub, Nac, Count and Weather Information Items*/
+#infoStyle {
+    font-size: 48px;
+    text-align: center;
+    background-color:#141414;
+    color:white;
+    width:100%;
+}
+
+#timeStyle {
+    font-size: 50px;
+    text-align: center;
+    background-color:#141414;
+    color:white;
+    width:100%;
+}
+
+/*Area container*/
+#areaContainer {
+    background-color: #222222;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 45px;
+    color: white;
+}
+
+/*Support button labels - All*/
+#suppBtns input {
+    display: none;
+}
+#suppBtns label {
+    padding: 5px 30px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 3px;
+    font-size: 45px;
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.L {}
+.Q {}
+.M {}
+.TS {}
+
+.L input {
+    display: none;
+}
+.Q input {
+    display: none;
+}
+.M input {
+    display: none;
+}
+.TS input {
+    display: none;
+}
+
+.L label {
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 35px;
+    color:black;
+
+}
+.M label {
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 35px;
+    color:black;
+
+}
+.Q label {
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 35px;
+    color:black;
+
+}
+.TS label {
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 35px;
+    color:black;
+   
+
+}
+
+
+/*L Blue themed buttons*/
+.L input:not(:checked) ~ label {
+    background: blue;
+    animation: flashAvailable 0.5s ease;
+}
+.L input:checked ~ label {
+    background: blue;
+/*    color: white;*/
+    animation: flashBooked 0.5s ease;
+    -webkit-animation-name: lColor; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: lColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes lColor {
+    0%   {background-color:white;}
+    25%  {background-color:white;}
+    50%  {background-color:blue;}
+    75%  {background-color:blue;}
+    100% {background-color:blue; }
+}
+/* Standard syntax */
+@keyframes lColor {
+    0%   {background-color:white;}
+    25%  {background-color:white;}
+    50%  {background-color:blue;}
+    75%  {background-color:blue;}
+    100% {background-color:blue;}
+}
+/* Q Green themed buttons*/
+.Q input:not(:checked) ~ label {
+    background: chartreuse;
+    animation: flashAvailable 0.5s ease;
+}
+.Q input:checked ~ label {
+    background: chartreuse;
+    animation: flashBooked 0.5s ease;
+    -webkit-animation-name: qColor; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: qColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes qColor {
+    0%   {background-color:white;}
+    25%  {background-color:white;}
+    50%  {background-color:chartreuse;}
+    75%  {background-color:chartreuse;}
+    100% {background-color:chartreuse; }
+}
+/* Standard syntax */
+@keyframes qColor {
+    0%   {background-color:white;}
+    25%  {background-color:white;}
+    50%  {background-color:chartreuse;}
+    75%  {background-color:chartreuse;}
+    100% {background-color:chartreuse;}
+}
+/* M Red themed buttons*/
+.M input:not(:checked) ~ label {
+    background: red;
+    color:black;
+    animation: flashAvailable 0.5s ease;
+}
+.M input:checked ~ label {
+    background: red;
+    animation: flashBooked 0.5s ease;
+    -webkit-animation-name: mColor; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: mColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes mColor {
+    0%   {background-color:white;}
+    25%  {background-color:white;}
+    50%  {background-color:red;}
+    75%  {background-color:red;}
+    100% {background-color:red; }
+}
+/* Standard syntax */
+@keyframes mColor {
+    0%   {background-color:white;}
+    25%  {background-color:white;}
+    50%  {background-color:red;}
+    75%  {background-color:red;}
+    100% {background-color:red;}
+}
+
+/*TS Purple themed buttons*/
+.TS input:not(:checked) ~ label {
+    background: yellow;
+    color:black;
+    animation: flashAvailable 0.5s ease;
+/*    animation: flashAvailable 0.5s ease;*/
+}
+.TS input:checked ~ label {
+    background: yellow;
+    animation: flashBooked 0.5s ease;
+    -webkit-animation-name: tsColor; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: tsColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes tsColor {
+    0%   {background-color:white;}
+    25%  {background-color:white;}
+    50%  {background-color:yellow;}
+    75%  {background-color:yellow;}
+    100% {background-color:yellow; }
+}
+/* Standard syntax */
+@keyframes tsColor {
+    0%   {background-color:white;}
+    25%  {background-color:white;}
+    50%  {background-color:yellow;}
+    75%  {background-color:yellow;}
+    100% {background-color:yellow;}
+}
+
+/*Orange Themed buttons*/
+.time-slot {}
+.time-slot input {
+    display: none;
+}
+.time-slot label {
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    font-size: 35px;
+    color:black;
+
+}
+.time-slot input:checked ~ label {
+    color:black;
+    background: white;
+    animation: flashBooked 0.5s ease;
+}
+.time-slot input:not(:checked) ~ label {
+    color:black;
+/*    background: #FFAC00;*/
+  
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+        
+        
+    animation: flashAvailable 0.5s ease;
+}
+
+
+
+/* animation for the time slot to flash grey */
+@keyframes flashAvailable {
+    0%,
+    100% {
+        background: white;
+        transform: scale(1);
+    }
+    50% {
+        background: white;
+        transform: scale(1.5);
+    }
+}
+/* animation for the time slot to flash green */
+@keyframes flashBooked {
+    0%,
+    100% {
+        background: black;
+        transform: scale(1);
+    }
+    50% {
+        background: black;
+        transform: scale(1.5);
+    }
+}
+
+/*Footer styling*/
+.footer, .push {
+    font-size: 1em;
+    text-align: right;
+    color: yellow;
+}
+
+}
+
+

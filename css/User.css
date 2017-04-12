@@ -1,0 +1,992 @@
+/*Media Queries for each screen size*/
+
+/*Extra small devices Phones (<768px)*/
+@media screen and (min-width:100px) and (max-width:767px) {
+   /*Container*/
+ 
+.navbar-header {
+        font-size: 10px;
+    }
+    
+ #user {
+     margin: 0 auto;
+     padding: 0;
+     font: 300 1em/1.5 'Open Sans', sans-serif;
+     max-width: 100%;
+     height: 90%;
+ }
+ /* Support Button element*/
+ 
+ #supportBtn {}
+ /*Nacelle information*/
+ 
+    table {
+        font-size: 20px;
+    }
+ #infoArea {
+     color: blue;
+     border: 1px solid #000;
+     border-radius: 10px;
+     text-align: center;
+     margin-top: 45px;
+     font-family: Calibri;
+ }
+    #infoAreaNacUser {
+     color: #fff;
+     border: 1px solid #000;
+     border-radius: 10px;
+     text-align: center;
+     margin-top: 30px;
+     font-family: Calibri;
+ }
+ 
+ #infoAreaNacUser h2 {
+     background: aliceblue;
+     text-align: center;
+     color: Black;
+ }
+ /*Table Borders*/
+ 
+ #infoAreaNacUser {
+     font-size: 30px;
+     border: solid 2px black;
+ }
+ /*Footer for Single user*/
+ 
+ .counter {
+     text-align: center;
+ }
+ /*Counter element*/
+ 
+ .takt {
+     text-align: center;
+ }
+
+    h1, h2, h3 {
+    font-size:20px;
+    text-align: center;
+/*
+    margin-bottom: 15px;
+    margin-left: 38px;
+*/
+    }
+ .btn1, .btn2, .btn3,.btn4 {
+     display: block;
+     margin-bottom: 15px;
+    margin-left: 5px;
+     width: 60px;
+     height: 63px;
+     line-height: 50px;
+     border: 2px solid #f5f5f5;
+     border-radius: 25%;
+     color: #000000;
+     text-align: center;
+     text-decoration: none;
+     background: yellow;
+     box-shadow: 0.5px 3px gray;
+     font-size: 30px;
+     font-weight: bold;
+     float: left;
+ }
+ 
+ .btn1:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn2 {
+     background: #00ff00;
+ }
+ 
+ .btn2:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn3 {
+     background: #0000ff;
+ }
+ 
+ .btn3:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn4 {
+     background: #ff0000;
+ }
+ 
+ .btn4:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ /* Counter buttons*/
+ 
+ .btn5,
+ .btn6 {
+     margin: 15px 10px 10px 10px;
+     -webkit-border-radius: 20;
+     -moz-border-radius: 20;
+     border-radius: 20px;
+     text-shadow: 1px 1px 1px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #ffbf00;
+/*     padding: 5px 10px 5px 10px;*/
+     border: solid #FFFFFF 2.5px;
+     text-decoration: none;
+     box-shadow: 0 2.5px #999;
+ }
+ 
+ .btn5:active {
+     background-color: aqua;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn6:active {
+     background-color: aqua;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ /*Timer Start stop buttons*/
+ 
+ .btn7 {
+     margin-right: 10px;
+     border-radius: 20px;
+     text-shadow: 1px 1px 3px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #0000ff;
+     padding: px 10px 5px 10px;
+     border: solid #F0FFFF 2.5px;
+     box-shadow: 0 2px #999;
+ }
+ 
+ .btn7:active {
+     background-color: green;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn8 {
+     margin-right: 10px;
+     -webkit-border-radius: 20;
+     -moz-border-radius: 20;
+     border-radius: 20px;
+     text-shadow: 1px 1px 3px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #0000ff;
+     padding: 5px 10px 5px 10px;
+     border: solid #F0FFFF 5px;
+     box-shadow: 0 5px #999;
+ }
+ 
+ .btn8:active {
+     background-color: red;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ /**********Dual User screen Container***********/
+ 
+ #dualUser {
+     margin: 0 auto;
+     padding: 0;
+     font: 300 1em/1.5 'Open Sans', sans-serif;
+     max-width: 100%;
+     height: 90%;
+ }
+ /*Hub information Dual screen*/
+ 
+ #infoAreaDualUser {
+     color: #fff;
+     border: 1px solid #000;
+     border-radius: 10px;
+     text-align: center;
+     margin-top: 30px;
+     font-family: Calibri;
+ }
+ 
+ #infoAreaDualUser h2 {
+     background: aliceblue;
+     text-align: center;
+     color: Black;
+ }
+ /*******Hub count********/
+ 
+ .counter2 {
+     padding-left: 30px;
+     text-align: center;
+     margin: 40px 0px 50px 0px;
+ }
+ /**********takt start/stop****************/
+ 
+ .takt2 {
+     text-align: center;
+ }
+ 
+ #infoAreaNacUser td {
+     font-size: 20px;
+ }
+ 
+ #infoAreaNacUser th {
+     font-size: 20px;
+ }
+ /*Table font size for Tablet dual user screens*/
+ 
+ #infoAreaDualUser td {
+     font-size: 20px;
+ }
+ 
+ #infoAreaDualUser th {
+     font-size: 20px;
+ }
+ /*Footer*/
+ 
+ .counter2 {
+     margin-bottom: 10px;
+ }
+ /*Counter element*/
+ 
+ .takt2 {
+     text-align: center;
+     margin-top: 20px;
+     margin-left: 20px;
+ }
+}
+/*Small devices Tablets (≥768px)*/
+@media screen and (min-width:768px) and (max-width:992px){
+   /*Container*/
+    h1, h2, h3 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+ #hubInfo {
+     font-size: 25px;
+ }
+    #hubInfo td {
+        border: solid 3px black;
+    }
+ /* Support Button element*/
+ 
+ #supportBtn {}
+ /*Nacelle information*/
+ 
+ #infoAreaNacUser {
+     color: #fff;
+     border: 1px solid #000;
+     border-radius: 10px;
+     text-align: center;
+     margin-top: 30px;
+     font-family: Calibri;
+ }
+ 
+ #infoAreaNacUser h2 {
+     background: aliceblue;
+     text-align: center;
+     color: Black;
+ }
+ /*Table Borders*/
+ 
+ #infoAreaNacUser {
+     font-size: 30px;
+     border: solid 2px black;
+ }
+ /*Footer for Single user*/
+ 
+ .counter {
+     text-align: center;
+ }
+ /*Counter element*/
+ 
+ .takt {
+     text-align: center;
+ }
+
+ .btn1, .btn2, .btn3, .btn4 {
+     display: block;
+     margin-bottom: 20px;
+     margin-left: 40px;
+     width: 120px;
+     height: 120px;
+     line-height: 90px;
+     border: 5px solid #f5f5f5;
+     border-radius: 50%;
+     color: #000000;
+     text-align: center;
+     text-decoration: none;
+     background: yellow;
+     box-shadow: 1px 6px gray;
+     font-size: 60px;
+     font-weight: bold;
+ }
+ 
+ .btn1:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn2 {
+     background: #00ff00;
+ }
+ 
+ .btn2:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn3 {
+     background: #0000ff;
+ }
+ 
+ .btn3:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn4 {
+     background: #ff0000;
+ }
+ 
+ .btn4:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ /* Counter buttons*/
+ 
+ .btn5,
+ .btn6 {
+     margin: 0px 50px 0px 0px;
+     -webkit-border-radius: 20;
+     -moz-border-radius: 20;
+     border-radius: 20px;
+     text-shadow: 1px 1px 3px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #ffbf00;
+     padding: 5px 15px 5px 15px;
+     border: solid #FFFFFF 5px;
+     text-decoration: none;
+     box-shadow: 0 5px #999;
+ }
+ 
+ .btn5:active {
+     background-color: aqua;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn6:active {
+     background-color: aqua;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ /*Timer Start stop buttons*/
+ 
+ .btn7 {
+     margin-right: 10px;
+     border-radius: 20px;
+     text-shadow: 1px 1px 3px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #0000ff;
+     padding: px 10px 5px 10px;
+     border: solid #F0FFFF 5px;
+     box-shadow: 0 4px #999;
+ }
+ 
+ .btn7:active {
+     background-color: green;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn8 {
+     margin-right: 10px;
+     -webkit-border-radius: 20;
+     -moz-border-radius: 20;
+     border-radius: 20px;
+     text-shadow: 1px 1px 3px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #0000ff;
+     padding: 5px 10px 5px 10px;
+     border: solid #F0FFFF 5px;
+     box-shadow: 0 5px #999;
+ }
+ 
+ .btn8:active {
+     background-color: red;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ /**********Dual User screen Container***********/
+ 
+ #dualUser {
+     margin: 0 auto;
+     padding: 0;
+     font: 300 1em/1.5 'Open Sans', sans-serif;
+     max-width: 100%;
+     height: 90%;
+ }
+ /*Hub information Dual screen*/
+ 
+ #infoAreaDualUser {
+     color: #fff;
+     border: 1px solid #000;
+     border-radius: 10px;
+     text-align: center;
+     margin-top: 30px;
+     font-family: Calibri;
+ }
+ 
+ #infoAreaDualUser h2 {
+     background: aliceblue;
+     text-align: center;
+     color: Black;
+ }
+ /*******Hub count********/
+ 
+ .counter2 {
+     padding-left: 30px;
+     text-align: center;
+     margin: 40px 0px 50px 0px;
+ }
+ /**********takt start/stop****************/
+ 
+ .takt2 {
+     text-align: center;
+ }
+ 
+ #infoAreaNacUser td {
+     font-size: 20px;
+ }
+ 
+ #infoAreaNacUser th {
+     font-size: 20px;
+ }
+ /*Table font size for Tablet dual user screens*/
+ 
+ #infoAreaDualUser td {
+     font-size: 20px;
+ }
+ 
+ #infoAreaDualUser th {
+     font-size: 20px;
+ }
+ /*Footer*/
+ 
+ .counter2 {
+     margin-bottom: 10px;
+ }
+ /*Counter element*/
+ 
+ .takt2 {
+     text-align: center;
+     margin-top: 20px;
+     margin-left: 20px;
+ }
+}
+/*Medium devices Desktops (≥992px)*/
+@media screen and (min-width:992px) and (max-width:1200px){
+   /*Container*/
+    h1, h2, h3 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+ #hubInfo {
+     font-size: 25px;
+ }
+    #hubInfo td {
+        border: solid 3px black;
+    }
+ /* Support Button element*/
+ 
+ #supportBtn {}
+ /*Nacelle information*/
+ 
+ #infoAreaNacUser {
+     color: #fff;
+     border: 1px solid #000;
+     border-radius: 10px;
+     text-align: center;
+     margin-top: 30px;
+     font-family: Calibri;
+ }
+ 
+ #infoAreaNacUser h2 {
+     background: aliceblue;
+     text-align: center;
+     color: Black;
+ }
+ /*Table Borders*/
+ 
+ #infoAreaNacUser {
+     font-size: 30px;
+     border: solid 2px black;
+ }
+ /*Footer for Single user*/
+ 
+ .counter {
+     text-align: center;
+ }
+ /*Counter element*/
+ 
+ .takt {
+     text-align: center;
+ }
+
+ .btn1, .btn2, .btn3, .btn4 {
+     display: block;
+     margin-bottom: 10px;
+     margin-left: 100px;
+     width: 80px;
+     height: 80px;
+     line-height: 65px;
+     border: 2.5px solid #f5f5f5;
+     border-radius: 50%;
+     color: #000000;
+     text-align: center;
+     text-decoration: none;
+     background: yellow;
+     box-shadow: 1px 3px gray;
+     font-size: 35px;
+     font-weight: bold;
+ }
+ 
+ .btn1:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn2 {
+     background: #00ff00;
+ }
+ 
+ .btn2:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn3 {
+     background: #0000ff;
+ }
+ 
+ .btn3:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn4 {
+     background: #ff0000;
+ }
+ 
+ .btn4:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ /* Counter buttons*/
+ 
+ .btn5,
+ .btn6 {
+     margin: 0px 50px 0px 0px;
+     -webkit-border-radius: 20;
+     -moz-border-radius: 20;
+     border-radius: 20px;
+     text-shadow: 1px 1px 3px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #ffbf00;
+     padding: 5px 10px 5px 10px;
+     border: solid #FFFFFF 2.5px;
+     text-decoration: none;
+     box-shadow: 0 2.5px #999;
+ }
+ 
+ .btn5:active {
+     background-color: aqua;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn6:active {
+     background-color: aqua;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ /*Timer Start stop buttons*/
+ 
+ .btn7 {
+     margin-right: 10px;
+     border-radius: 20px;
+     text-shadow: 1px 1px 3px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #0000ff;
+     padding: px 10px 5px 10px;
+     border: solid #F0FFFF 2.5px;
+     box-shadow: 0 4px #999;
+ }
+ 
+ .btn7:active {
+     background-color: green;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn8 {
+     margin-right: 10px;
+     -webkit-border-radius: 20;
+     -moz-border-radius: 20;
+     border-radius: 20px;
+     text-shadow: 1px 1px 3px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #0000ff;
+     padding: 5px 10px 5px 10px;
+     border: solid #F0FFFF 5px;
+     box-shadow: 0 2.5px #999;
+ }
+ 
+ .btn8:active {
+     background-color: red;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ /**********Dual User screen Container***********/
+ 
+ #dualUser {
+     margin: 0 auto;
+     padding: 0;
+     font: 300 1em/1.5 'Open Sans', sans-serif;
+     max-width: 100%;
+     height: 90%;
+ }
+ /*Hub information Dual screen*/
+ 
+ #infoAreaDualUser {
+     color: #fff;
+     border: 1px solid #000;
+     border-radius: 10px;
+     text-align: center;
+     margin-top: 30px;
+     font-family: Calibri;
+ }
+ 
+ #infoAreaDualUser h2 {
+     background: aliceblue;
+     text-align: center;
+     color: Black;
+ }
+ /*******Hub count********/
+ 
+ .counter2 {
+     padding-left: 30px;
+     text-align: center;
+     margin: 40px 0px 50px 0px;
+ }
+ /**********takt start/stop****************/
+ 
+ .takt2 {
+     text-align: center;
+ }
+ 
+ #infoAreaNacUser td {
+     font-size: 20px;
+ }
+ 
+ #infoAreaNacUser th {
+     font-size: 20px;
+ }
+ /*Table font size for Tablet dual user screens*/
+ 
+ #infoAreaDualUser td {
+     font-size: 20px;
+ }
+ 
+ #infoAreaDualUser th {
+     font-size: 20px;
+ }
+ /*Footer*/
+ 
+ .counter2 {
+     margin-bottom: 10px;
+ }
+ /*Counter element*/
+ 
+ .takt2 {
+     text-align: center;
+     margin-top: 20px;
+     margin-left: 20px;
+ }
+}
+/*Large devices Desktops (≥1200px)*/
+@media screen and (min-width:1200px) and (max-width:1980px){
+   /*Container*/
+    h1, h2, h3 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+ #hubInfo {
+     font-size: 60px;
+ }
+    #hubInfo td {
+        border: solid 3px black;
+    }
+ /* Support Button element*/
+ 
+ #supportBtn {}
+ /*Nacelle information*/
+ 
+ #infoAreaNacUser {
+     color: #fff;
+     border: 1px solid #000;
+     border-radius: 10px;
+     text-align: center;
+     margin-top: 30px;
+     font-family: Calibri;
+ }
+ 
+ #infoAreaNacUser h2 {
+     background: aliceblue;
+     text-align: center;
+     color: Black;
+ }
+ /*Table Borders*/
+ 
+ #infoAreaNacUser {
+     font-size: 30px;
+     border: solid 2px black;
+ }
+ /*Footer for Single user*/
+ 
+ .counter {
+     text-align: center;
+ }
+ /*Counter element*/
+ 
+ .takt {
+     text-align: center;
+ }
+
+ .btn1, .btn2, .btn3, .btn4 {
+     display: block;
+     margin-bottom: 5px;
+     margin-left: 170px;
+     width: 150px;
+     height: 150px;
+     line-height: 140px;
+     border: 5px solid #f5f5f5;
+     border-radius: 50%;
+     color: #000000;
+     text-align: center;
+     text-decoration: none;
+     background: yellow;
+     box-shadow: 1px 4px gray;
+     font-size: 93px;
+     font-weight: bold;
+ }
+ 
+ .btn1:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn2 {
+     background: #00ff00;
+ }
+ 
+ .btn2:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn3 {
+     background: #0000ff;
+ }
+ 
+ .btn3:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn4 {
+     background: #ff0000;
+ }
+ 
+ .btn4:active {
+     background-color: #000000;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ /* Counter buttons*/
+ 
+ .btn5,
+ .btn6 {
+     margin: 0px 50px 0px 0px;
+     -webkit-border-radius: 20;
+     -moz-border-radius: 20;
+     border-radius: 20px;
+     text-shadow: 1px 1px 3px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #ffbf00;
+     padding: 5px 10px 5px 10px;
+     border: solid #FFFFFF 2.5px;
+     text-decoration: none;
+     box-shadow: 0 2.5px #999;
+ }
+ 
+ .btn5:active {
+     background-color: aqua;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+ .btn6:active {
+     background-color: aqua;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ /*Timer Start stop buttons*/
+ 
+ .btn7 {
+     margin-right: 10px;
+     border-radius: 20px;
+     text-shadow: 1px 1px 3px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #0000ff;
+     padding: px 10px 5px 10px;
+     border: solid #F0FFFF 2.5px;
+     box-shadow: 0 4px #999;
+ }
+ 
+ .btn7:active {
+     background-color: green;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+ 
+/*
+ .btn8 {
+     margin-right: 10px;
+     -webkit-border-radius: 20;
+     -moz-border-radius: 20;
+     border-radius: 20px;
+     text-shadow: 1px 1px 3px #666666;
+     font-family: Georgia;
+     color: #ffffff;
+     font-size: 20px;
+     background: #0000ff;
+     padding: 5px 10px 5px 10px;
+     border: solid #F0FFFF 5px;
+     box-shadow: 0 2.5px #999;
+ }
+ 
+ .btn8:active {
+     background-color: red;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px)
+ }
+*/
+ /**********Dual User screen Container***********/
+ 
+ #dualUser {
+     margin: 0 auto;
+     padding: 0;
+     font: 300 1em/1.5 'Open Sans', sans-serif;
+     max-width: 100%;
+     height: 90%;
+ }
+ /*Hub information Dual screen*/
+ 
+ #infoAreaDualUser {
+     color: #fff;
+     border: 1px solid #000;
+     border-radius: 10px;
+     text-align: center;
+     margin-top: 30px;
+     font-family: Calibri;
+ }
+ 
+ #infoAreaDualUser h2 {
+     background: aliceblue;
+     text-align: center;
+     color: Black;
+ }
+ /*******Hub count********/
+ 
+ .counter2 {
+     padding-left: 30px;
+     text-align: center;
+     margin: 40px 0px 50px 0px;
+ }
+ /**********takt start/stop****************/
+ 
+ .takt2 {
+     text-align: center;
+ }
+ 
+ #infoAreaNacUser td {
+     font-size: 20px;
+ }
+ 
+ #infoAreaNacUser th {
+     font-size: 20px;
+ }
+ /*Table font size for Tablet dual user screens*/
+ 
+ #infoAreaDualUser td {
+     font-size: 20px;
+ }
+ 
+ #infoAreaDualUser th {
+     font-size: 20px;
+ }
+ /*Footer*/
+ 
+ .counter2 {
+     margin-bottom: 10px;
+ }
+ /*Counter element*/
+ 
+ .takt2 {
+     text-align: center;
+     margin-top: 20px;
+     margin-left: 20px;
+ }
+}
+
+
+

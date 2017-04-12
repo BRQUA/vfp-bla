@@ -1,0 +1,100 @@
+
+<section onTouchstart="">
+    <!-- PAGE HEADER -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-fluid">
+                <div class="navbar-header navbar-brand"> <a href="#/main/" class="">&lt;&lt; Main Screen </a> <a href="#/area/{{areaItem}}">&lt; Area Screen </a> </div>
+            </div>
+        </div>
+        <!--Single user screen-->
+        <h1>{{userItem}} User Screen</h1>
+        <div ng-show="showElapsedTime">
+            <h2 style="color: yellow; text-align:center;">{{suppUser}} {{suppTrig}} Activated</h2>
+            <h3 style="color: yellow; text-align:center;">Elapsed Time: {{elapsedTime | number:1}} minutes</h3> </div>
+        <div class="row">
+<!--Support1 Buttons -->
+            <div class="col-sm-4">
+                <div class="container-fluid">
+                    <h2>{{userItem}}</h2>
+                    <button type="button" class="btn1 btn" ng-click="suppTrigger(areaItem,userItem,'TS')">TS</button>
+                    <button type="button" class="btn2 btn" ng-click="suppTrigger(areaItem,userItem,'Q')">Q</button>
+                    <button type="button" class="btn3 btn" ng-click="suppTrigger(areaItem,userItem,'L')">L</button>
+                    <button type="button" class="btn4 btn" ng-click="suppTrigger(areaItem,userItem,'M')">M</button>
+                </div>
+            </div>
+            <!--Nacelle Takt Information-->
+            <div id="hubInfo" class="hidden-xs col-sm-4" >
+                <h1>Nacelle</h1>
+                <table style="text-align:center; width:100%;" id="">
+                    <tr>
+                        <td>Takt Time</td>
+                        <td>{{nacelle.info.staticTakt}}</td>
+                    </tr>
+                    <tr>
+                        <td>Actual Takt</td>
+                        <td>{{nacelle.info.actualTakt | number:1}}</td>
+                    </tr>
+                    <tr>
+                        <td>Accumulated</td>
+                        <td style="color:{{nacelle.info.accTimeColor}};">{{nacelle.info.accTime | number:1}}</td>
+                    </tr>
+                    <tr>
+                        <td>Actual</td>
+                        <td>{{nacelle.info.actualGoal}}</td>
+                    </tr>
+                    <tr>
+                        <td>Goal</td>
+                        <td>{{nacelle.info.weeklyGoal}}</td>
+                    </tr>
+                    <tr>
+                        <td>Last Step</td>
+                        <td>{{nacelle.info.lastStep | date:'shortTime'}}</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td class="{{nacelle.status}}">{{nacelle.status}}</td>
+                    </tr>
+                </table>
+            </div>
+            <!--Support2 Buttons -->
+            <div class="col-sm-4" id="">
+                <div class="container-fluid">
+                    <div ng-show="nacelle.areas[areaItem].subs[userItem].dual">
+                        <h2 style="color:white; text-align: center;">{{nacelle.areas[areaItem].subs[userItem].second}}</h2>
+                        <button type="button" class="btn1 btn" ng-click="suppTrigger(areaItem,nacelle.areas[areaItem].subs[userItem].second,'TS')">TS</button>
+                        <button type="button" class="btn2 btn" ng-click="suppTrigger(areaItem,nacelle.areas[areaItem].subs[userItem].second,'Q')">Q</button>
+                        <button type="button" class="btn3 btn" ng-click="suppTrigger(areaItem,nacelle.areas[areaItem].subs[userItem].second,'L')">L</button>
+                        <button type="button" class="btn4 btn" ng-click="suppTrigger(areaItem,nacelle.areas[areaItem].subs[userItem].second,'M')">M</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Nacelle counter -->
+        <div class="row">
+            <div class="container">
+                <div ng-show="nacelle.areas[areaItem].subs[userItem].counter">
+                    <div class="counter">
+                        <button class="btn5 btn" ng-click="nacCountUp()">Count up</button>
+                        <button class="btn6 btn" ng-click="nacCountDown()">Count down</button>
+<!--                        <button ng-disabled="nacResetBtn" type="button" class="btn6 btn" data-ng-click="nacTaktReset()">Reset</button>-->
+                    </div>
+                </div>
+                <!--Takt Counter-->
+                <div class="takt">
+                    <div ng-show="nacelle.areas[areaItem].subs[userItem].timer">
+                        <button ng-hide="config.autoTakt" ng-disabled="nacStartBtn" type="button" class="btn7 btn" data-ng-click="nacTaktStart()">Start</button>
+                        <button ng-hide="config.autoTakt" ng-disabled="nacPauseBtn" type="button" class="btn7 btn" data-ng-click="nacTaktPause()">Pause</button>
+                        <button ng-hide="config.autoTakt" ng-disabled="nacStopBtn" type="button" class="btn7 btn" data-ng-click="nacTaktStop()">Stop</button>
+                        <button ng-show="config.autoTakt" ng-disabled="nacStartBtn" type="button" class="btn7 btn" data-ng-click="nacStartTakt()">Start</button>
+<!--                        <button ng-disabled="nacPauseBtn" type="button" class="btn7 btn" data-ng-click="nacTaktPause()">Pause</button>-->
+                        <button ng-show="config.autoTakt" ng-disabled="nacStopBtn" type="button" class="btn7 btn" data-ng-click="nacStopTakt()">Stop</button>
+                        
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

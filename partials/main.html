@@ -1,0 +1,164 @@
+<!--<meta http-equiv="refresh" content="3600" />-->
+
+<section class="container-fluid">
+
+<!--ROW 1 Supp Buttons, Weather, counts-->
+<div class="row">
+    <div class="container-fluid">
+        <!-- Support Buttons-->
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <section class="">
+                        <div id="areaContainer"> Support </div>
+                        <div id="suppBtns">
+                        <div class="{{supp.name}}" ng-repeat="supp in supps" ng-disabled="!config.mainBtnsDisabled">
+                            <input type="checkbox" id="{{supp.name}}">
+                            <label for="{{supp.name}}">{{supp.name}}</label>
+                        </div>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!--time/date/weather-->
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <div class="container-fluid">
+                <div id="areaContainer"> Local </div>
+                <table id="timeStyle">
+                    <tr>
+                        <td my-current-time="'M/d/yy h:mma'"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <angular-openweathermap city-name="Brighton, CO" offset-hours="-4" offset-minutes="0"></angular-openweathermap>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--Turbine image-->
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <div class="container-fluid"> <img src="img/windTurbine.gif" alt="windTurbine" style="width:100%;height:100%;"> </div>
+        </div>
+        <!--Counts-->
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <div class="container-fluid">
+                <div id="areaContainer"> Count </div>
+                <table id="infoStyle">
+                    <tr>
+                        <td></td>
+                        <td>Actual</td>
+                        <td>Goal</td>
+                    </tr>
+                    <tr>
+                        <td>NAC</td>
+                        <td>{{nacInfo.actualGoal}}</td>
+                        <td>{{nacInfo.weeklyGoal}}</td>
+                    </tr>
+                    <tr>
+                        <td>HUB</td>
+                        <td>{{hubInfo.actualGoal}}</td>
+                        <td>{{hubInfo.weeklyGoal}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!--ROW 2 Hub and Info-->
+    <div class="row" id="">
+        <div class="container-fluid">
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <!--Hub Area buttons-->  
+                    <div class="container-fluid">
+                        <div id="areaContainer">{{ hub.name }}</div>
+                        <div class="{{sub.style}}" ng-repeat="sub in hub.subs">
+                            <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
+                            <label for="{{ sub.name }}"><a href="#/hub">{{ sub.name }}</a> </label>
+                        </div>
+                    </div>
+                </div>
+        <!--Nacelle info -->
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="container-fluid">
+                    <div id="areaContainer">Nacelle</div>
+                    <div>
+                        <table id="infoStyle">
+                            <tr>
+                                <td>Takt Time</td>
+                                <td>{{nacInfo.staticTakt}}</td>
+                            </tr>
+                            <tr>
+                                <td>Actual Takt</td>
+                                <td>{{nacInfo.actualTakt | number:1}}</td>
+                            </tr>
+                            <tr>
+                                <td>Accumulated</td>
+                                <td style="color:{{nacelle.info.accTimeColor}};">{{nacInfo.accTime | number:1}}</td>
+                            </tr>
+                            <tr>
+                                <td>Last Step</td>
+                                <td>{{nacInfo.lastStep | date:'shortTime'}}</td>
+                            </tr>
+                             <tr>
+                                <td>Status</td>
+                                <td class="{{nacelle.status}}">{{nacelle.status}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                        </div>
+                </div>
+        <!--Hub info-->
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="container-fluid">
+                    <div id="areaContainer">
+                        Hub
+                        </div>
+                    <div>
+                        <table id="infoStyle">
+                            <tr>
+                                <td>Takt Time</td>
+                                <td>{{hubInfo.staticTakt}}</td>
+                            </tr>
+                            <tr>
+                                <td>Actual Takt</td>
+                                <td>{{hubInfo.actualTakt | number:1}}</td>
+                            </tr>
+                            <tr>
+                                <td>Accumulated</td>
+                                <td style="color:{{hub.info.accTimeColor}};">{{hubInfo.accTime | number:1}}</td>
+                            </tr>
+                            <tr>
+                                <td>Last Step</td>
+                                <td>{{hubInfo.lastStep | date:'shortTime'}}</td>
+                            </tr>
+                             <tr>
+                                <td>Status</td>
+                                <td class="{{hub.status}}">{{hub.status}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                        </div>
+                </div>
+            </div>
+    </div>    
+
+<!--Row 3 Nacelle Areas-->
+    <div class="row" id="">
+        <div class="container-fluid">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" ng-repeat="item in nacelle.areas">
+                <div class="">
+                    <div id="areaContainer"> 
+                        {{ item.name }}
+                    </div>
+                    <div id="areaLabels" class="{{sub.style}}" ng-repeat="sub in item.subs">
+                        <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
+                        <label for="{{ sub.name }}"><a href="#/area/{{item.name}}">{{ sub.name }}</a> </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

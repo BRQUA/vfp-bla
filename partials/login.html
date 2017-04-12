@@ -1,0 +1,31 @@
+<section class="card login">
+    <form name="myform" ng-submit="login()" 
+          novalidate>
+        
+        <div class="login">
+            <div class="textintro">
+                <h2>Vestas Factory Portal</h2>
+                
+                <h3 class="message"> {{ message }}</h3><br><br>
+            </div>
+            <fieldset>
+                <input ng-hide="message" type="email" name="email" placeholder="Email" ng-model="email" ng-required="true"><br><br>
+                
+                <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched"> Must be a valid email</p>
+                
+                <input ng-hide="message" type="password" name="password" placeholder="Password" ng-model="password" ng-required="true">
+                
+                <p class="error validationerror" ng-show="myform.password.$invalid && myform.email.$touched"> Password is required</p>
+                
+            </fieldset>
+            <br>
+            <button ng-hide="message" type="submit" class="btn" ng-disabled="myform.$invalid">Login</button>
+           
+            <br>
+            <br>
+            
+             <p ng-if="error">Error: <strong>{{ error }}</strong></p>
+            <p><a ng-href="#/register">Register</a> for access.</p>
+    </form>
+</section>
+</div>

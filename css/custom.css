@@ -1,0 +1,18 @@
+body, button {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+#timedate {
+    font-size: 20px;
+    padding: 01px;
+    color:white;
+    background-color:gray;
+    border: 1px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0px;
+}
+.hide {
+    display: none;
+}

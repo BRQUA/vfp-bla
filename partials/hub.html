@@ -1,0 +1,105 @@
+
+<section class="container-fluid">
+    <!--    <div class="row-fluid">-->
+    <div class="row" id="areaScreen">
+        <h1 style="font-size:80px">{{hub.name}}</h1>
+        <!--Operations area -->
+        <div class="col-sm-5 col-md-9 col-lg-9">
+            <div class="container-fluid">
+                <div id="areaScreenLabels" class="{{sub.opStyle}}" ng-repeat="sub in hub.subs">
+                    <input type="checkbox" id="{{sub.name}}" ng-model="sub.trigger" ng-disabled="true">
+                    <label for="{{sub.name}}"><a href="#/hubUsers/{{sub.name}}">{{sub.name}}</a></label>
+                </div>
+            </div>
+        </div>
+        <!--Weather Time Date -->
+        <div class="col-sm-6 col-md-3 col-lg-3" id="timedateArea">
+            <div class="container-fluid">
+                <div id="areaScreenContainer">Local</div>
+                <table id="areaInfoStyle" style="width:100%;">
+                    <tr>
+                        <td style="text-align:center;" my-current-time="'M/d/yy h:mm a'"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">
+                            <angular-openweathermap city-name="Brighton, CO" offset-hours="-4" offset-minutes="0"></angular-openweathermap>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--Hub Takt Information-->
+    <div class="row" id="areaScreen">
+        <div class="col-sm-3 col-md-3 col-lg-3" id="infoAreaHub">
+            <h1>Hub Info</h1>
+            <table style="width:100%;" class="areaScreenTable">
+<!--
+                <tr style="text-align:center">
+                    <td>Takt Time</td>
+                    <td>{{hubInfo.staticTakt | number:1}}</td>
+                </tr>
+-->
+                <tr>
+                    <td>Takt</td>
+                    <td>{{hubInfo.actualTakt | number:1}}</td>
+                </tr>
+<!--
+                <tr>
+                    <td>Accumulated</td>
+                    <td>{{hubInfo.accTime | number:1}}</td>
+                </tr>
+-->
+<!--
+                <tr>
+                    <td>Last Step</td>
+                    <td>{{hubInfo.lastStep | date:'shortTime'}}</td>
+                </tr>
+-->
+                <tr>
+                    <td>Status</td>
+                    <td class="{{hub.status}}">{{hub.status}}</td>
+                </tr>
+            </table>
+        </div>
+        <!--Hub Count Information-->
+        <div class="col-sm-2 col-md-2 col-lg-2" id="infoAreaHub">
+            <h1>Count</h1>
+            <table style="width:100%" class="areaScreenTable">
+                
+                    <tr>
+                        <td>Act</th>
+                        <td>Goal</th>
+                    </tr>
+                    <tr>
+                        <td>{{hubInfo.actualGoal}}</td>
+                        <td>{{hubInfo.weeklyGoal}}</td>
+                    </tr>
+            </table>
+        </div>
+        <!--Support Area Labels-->
+        <div class=" col-sm-2 col-md-3 col-lg-3">
+            <div class="container-fluid">
+                <div class="areaSection">
+                    <h1 style="text-align:left">Support</h1>
+                    <div class="L_area">
+                        <input type="checkbox" id="L_area">
+                        <label for="L_area">L</label>
+                    </div>
+                    <div class="M_area">
+                        <input type="checkbox" id="M_area">
+                        <label for="M_area">M</label>
+                    </div>
+                    <div class="Q_area">
+                        <input type="checkbox" id="Q_area">
+                        <label for="Q_area">Q</label>
+                    </div>
+                    <div class="TS_area">
+                        <input type="checkbox" id="TS_area">
+                        <label for="TS_area">TS</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
