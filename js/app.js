@@ -1,10 +1,11 @@
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyA9aYQaW0504UPrbd_ulpLj6SafAgt2dWg",
-    authDomain: "vfp-nac.firebaseapp.com",
-    databaseURL: "https://vfp-nac.firebaseio.com",
-    storageBucket: "vfp-nac.appspot.com",
-    messagingSenderId: "532607841486"
+    apiKey: "AIzaSyB-H7pmw71std48GKRCoRtMUKxI08zcuEs",
+    authDomain: "vfp-bla.firebaseapp.com",
+    databaseURL: "https://vfp-bla.firebaseio.com",
+    projectId: "vfp-bla",
+    storageBucket: "vfp-bla.appspot.com",
+    messagingSenderId: "775389947535"
   };
   
 firebase.initializeApp(config);
