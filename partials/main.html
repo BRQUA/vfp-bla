@@ -44,7 +44,7 @@
         <!--Counts-->
         <div class="col-sm-3 col-md-3 col-lg-3">
             <div class="container-fluid">
-                <div id="areaContainer"> Count </div>
+                <div id="areaContainer"> Complete </div>
                 <table id="infoStyle">
                     <tr>
                         <td></td>
@@ -52,12 +52,12 @@
                         <td>Goal</td>
                     </tr>
                     <tr>
-                        <td>NAC</td>
+                        <td>v136</td>
                         <td>{{nacInfo.actualGoal}}</td>
                         <td>{{nacInfo.weeklyGoal}}</td>
                     </tr>
                     <tr>
-                        <td>HUB</td>
+                        <td>FIN</td>
                         <td>{{hubInfo.actualGoal}}</td>
                         <td>{{hubInfo.weeklyGoal}}</td>
                     </tr>
@@ -70,20 +70,11 @@
 <!--ROW 2 Hub and Info-->
     <div class="row" id="">
         <div class="container-fluid">
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    <!--Hub Area buttons-->  
-                    <div class="container-fluid">
-                        <div id="areaContainer">{{ hub.name }}</div>
-                        <div class="{{sub.style}}" ng-repeat="sub in hub.subs">
-                            <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
-                            <label for="{{ sub.name }}"><a href="#/hub">{{ sub.name }}</a> </label>
-                        </div>
-                    </div>
-                </div>
+
         <!--Nacelle info -->
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="container-fluid">
-                    <div id="areaContainer">Nacelle</div>
+                    <div id="areaContainer">V136 Shell</div>
                     <div>
                         <table id="infoStyle">
                             <tr>
@@ -109,13 +100,22 @@
                         </table>
                     </div>
                         </div>
+                     <div ng-repeat="item in nacelle.areas">
+                <div class="">
+                    <div id="areaContainer"> 
+                        {{ item.name }}
+                    </div>
+                    <div id="areaLabels" class="{{sub.style}}" ng-repeat="sub in item.subs">
+                        <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
+                        <label for="{{ sub.name }}"><a href="#/area/{{item.name}}">{{ sub.name }}</a> </label>
+                    </div>
+                </div>
+            </div>
                 </div>
         <!--Hub info-->
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="container-fluid">
-                    <div id="areaContainer">
-                        Hub
-                        </div>
+                    <div id="areaContainer">Finish</div>
                     <div>
                         <table id="infoStyle">
                             <tr>
@@ -141,6 +141,17 @@
                         </table>
                     </div>
                         </div>
+                            <!--Hub buttons-->
+                <div>
+                    <!--Hub Area buttons-->  
+                    <div class="container-fluid">
+                        <div id="areaContainer">{{ hub.name }}</div>
+                        <div class="{{sub.style}}" ng-repeat="sub in hub.subs">
+                            <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
+                            <label for="{{ sub.name }}"><a href="#/hub">{{ sub.name }}</a> </label>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
     </div>    
@@ -148,17 +159,7 @@
 <!--Row 3 Nacelle Areas-->
     <div class="row" id="">
         <div class="container-fluid">
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" ng-repeat="item in nacelle.areas">
-                <div class="">
-                    <div id="areaContainer"> 
-                        {{ item.name }}
-                    </div>
-                    <div id="areaLabels" class="{{sub.style}}" ng-repeat="sub in item.subs">
-                        <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
-                        <label for="{{ sub.name }}"><a href="#/area/{{item.name}}">{{ sub.name }}</a> </label>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </div>
 </section>
