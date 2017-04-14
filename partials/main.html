@@ -71,7 +71,49 @@
     <div class="row" id="">
         <div class="container-fluid">
 
-        <!--Nacelle info -->
+        <!--v110 Shell info -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="container-fluid">
+                    <div id="areaContainer">V110 Shell</div>
+                    <div>
+                        <table id="infoStyle">
+                            <tr>
+                                <td>Takt Time</td>
+                                <td>{{nacInfo.staticTakt}}</td>
+                            </tr>
+                            <tr>
+                                <td>Actual Takt</td>
+                                <td>{{nacInfo.actualTakt | number:1}}</td>
+                            </tr>
+                            <tr>
+                                <td>Accumulated</td>
+                                <td style="color:{{nacelle.info.accTimeColor}};">{{nacInfo.accTime | number:1}}</td>
+                            </tr>
+                            <tr>
+                                <td>Last Step</td>
+                                <td>{{nacInfo.lastStep | date:'shortTime'}}</td>
+                            </tr>
+                             <tr>
+                                <td>Status</td>
+                                <td class="{{nacelle.status}}">{{nacelle.status}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                        </div>
+                     <div ng-repeat="item in nacelle.areas">
+                <div class="">
+                    <div id="areaContainer"> 
+                        {{ item.name }}
+                    </div>
+                    <div id="areaLabels" class="{{sub.style}}" ng-repeat="sub in item.subs">
+                        <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
+                        <label for="{{ sub.name }}"><a href="#/area/{{item.name}}">{{ sub.name }}</a> </label>
+                    </div>
+                </div>
+            </div>
+                </div>    
+            
+        <!-- v136 Shell info -->
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="container-fluid">
                     <div id="areaContainer">V136 Shell</div>
@@ -112,7 +154,7 @@
                 </div>
             </div>
                 </div>
-        <!--Hub info-->
+        <!--Finish info-->
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="container-fluid">
                     <div id="areaContainer">Finish</div>
