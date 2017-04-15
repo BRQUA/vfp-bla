@@ -1,6 +1,8 @@
 var viewControllers = angular.module('viewControllers', ['firebase', 'ngSanitize','angular-openweathermap', 'ngTouch', 'ui.grid', 'ui.grid.cellNav', 'ui.grid.edit', 'ui.grid.resizeColumns', 'ui.grid.pinning', 'ui.grid.selection', 'ui.grid.moveColumns', 'ui.grid.exporter', 'ui.grid.importer', 'ui.grid.grouping', 'ngTable']);
 
         var ref = firebase.database().ref();
+        var firstLine = ref.child("1stLine");
+        var firstLineInfo = firstLine.child("info");
         var nacelle = ref.child("nacelle");
         var nacinfo = nacelle.child("info");
         var hub = ref.child("hub");
@@ -35,6 +37,12 @@ viewControllers.directive('myCurrentTime', ['$interval', 'dateFilter'
 
 viewControllers.controller('MainController', ['$scope', '$firebaseObject', '$routeParams', function ($scope, $firebaseObject, $routeParams) {
 
+        var syncObject = $firebaseObject(firstLine);
+        syncObject.$bindTo($scope, "firstLine");
+
+        var syncObject2 = $firebaseObject(firstLineInfo);
+        syncObject2.$bindTo($scope, "firstLineInfo");
+    
         var syncObject = $firebaseObject(nacelle);
         syncObject.$bindTo($scope, "nacelle");
 
