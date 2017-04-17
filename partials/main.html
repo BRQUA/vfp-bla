@@ -52,12 +52,12 @@
                         <td>Goal</td>
                     </tr>
                     <tr>
-                        <td>v136</td>
+                        <td>v110</td>
                         <td>{{nacInfo.actualGoal}}</td>
                         <td>{{nacInfo.weeklyGoal}}</td>
                     </tr>
                     <tr>
-                        <td>FIN</td>
+                        <td>v136</td>
                         <td>{{hubInfo.actualGoal}}</td>
                         <td>{{hubInfo.weeklyGoal}}</td>
                     </tr>
@@ -71,49 +71,63 @@
     <div class="row" id="">
         <div class="container-fluid">
 
-        <!--v110 Shell info -->
+        <!--1st Line info-->
         <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="container-fluid">
-                <div id="areaContainer">{{firstLine.info.name}}</div>
-                <div>
-                    <table id="infoStyle">
-                        <tr>
-                            <td>Takt Time</td>
-                            <td>{{firstLineInfo.staticTakt}}</td>
-                        </tr>
-                        <tr>
-                            <td>Actual Takt</td>
-                            <td>{{firstLineInfo.actualTakt | number:1}}</td>
-                        </tr>
-                        <tr>
-                            <td>Accumulated</td>
-                            <td style="color:{{firstLineInfo.info.accTimeColor}};">{{firstLineInfo.accTime | number:1}}</td>
-                        </tr>
-                        <tr>
-                            <td>Last Step</td>
-                            <td>{{firstLineInfo.lastStep | date:'shortTime'}}</td>
-                        </tr>
-                        <tr>
-                            <td>Status</td>
-                            <td class="{{firstLineInfo.status}}">{{firstLineInfo.status}}</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div>
-                    <!--Hub Area buttons-->  
                     <div class="container-fluid">
-                        <div id="areaContainer">{{ firstLine.info.name }}</div>
+                    <div id="areaContainer">{{firstLine.name}}</div>
+                    <div>
+                        <table id="infoStyle">
+                            <tr>
+                                <td>Takt Time</td>
+                                <td>{{hubInfo.staticTakt}}</td>
+                            </tr>
+                            <tr>
+                                <td>Actual Takt</td>
+                                <td>{{hubInfo.actualTakt | number:1}}</td>
+                            </tr>
+                            <tr>
+                                <td>Accumulated</td>
+                                <td style="color:{{hub.info.accTimeColor}};">{{hubInfo.accTime | number:1}}</td>
+                            </tr>
+                            <tr>
+                                <td>Last Step</td>
+                                <td>{{hubInfo.lastStep | date:'shortTime'}}</td>
+                            </tr>
+                             <tr>
+                                <td>Status</td>
+                                <td class="{{hub.status}}">{{hub.status}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                        </div>
+                            <!--Hub buttons-->
+                <div>
+                    <!--Hub Area buttons-->  
+                    <div class="container-fluid">        
+                <table id="infoStyle">
+                    <tr>
+                        
+                        <td>Actual</td>
+                        <td style="background-color: #222222">To date</td>
+                        <td>Goal</td>
+                    </tr>
+                    <tr> 
+                        <td>{{nacInfo.actualGoal}}</td>
+                        <td>15</td>
+                        <td>{{nacInfo.weeklyGoal}}</td>
+                    </tr>
+                   
+                </table>
+                        
                         <div class="{{sub.style}}" ng-repeat="sub in firstLine.subs">
                             <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
-                            <label for="{{ sub.name }}"><a href="#/firstLine">{{ sub.name }}</a> </label>
+                            <label for="{{ sub.name }}"><a href="#/hubUsers/{{sub.name}}">{{ sub.name }}</a> </label>
                         </div>
                     </div>
                 </div>
-        </div>
-            
+                </div>
         <!-- v136 Shell info -->
-                <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="container-fluid">
                     <div id="areaContainer">V136 Shell</div>
                     <div>
@@ -143,9 +157,22 @@
                         </div>
                      <div ng-repeat="item in nacelle.areas">
                 <div class="">
-                    <div id="areaContainer"> 
-                        {{ item.name }}
-                    </div>
+  
+                    
+                    <table id="infoStyle">
+                    <tr>
+                        
+                        <td>Actual</td>
+                        <td style="background-color: #222222">To date</td>
+                        <td>Goal</td>
+                    </tr>
+                    <tr> 
+                        <td>{{hubInfo.actualGoal}}</td>
+                        <td>15</td>
+                        <td>{{hubInfo.weeklyGoal}}</td>
+                    </tr>
+                   
+                </table>
                     <div id="areaLabels" class="{{sub.style}}" ng-repeat="sub in item.subs">
                         <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
                         <label for="{{ sub.name }}"><a href="#/area/{{item.name}}">{{ sub.name }}</a> </label>
@@ -154,7 +181,7 @@
             </div>
                 </div>
         <!--Finish info-->
-                <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="container-fluid">
                     <div id="areaContainer">Finish</div>
                     <div>
@@ -186,18 +213,32 @@
                 <div>
                     <!--Hub Area buttons-->  
                     <div class="container-fluid">
-                        <div id="areaContainer">{{ hub.name }}</div>
+                        <table id="infoStyle">
+                    <tr>
+                        
+                        <td>Actual</td>
+                        <td style="background-color: #222222">To date</td>
+                        <td>Goal</td>
+                    </tr>
+                    <tr> 
+                        <td>{{nacInfo.actualGoal}}</td>
+                        <td>15</td>
+                        <td>{{nacInfo.weeklyGoal}}</td>
+                    </tr>
+                   
+                </table>
                         <div class="{{sub.style}}" ng-repeat="sub in hub.subs">
                             <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
-                            <label for="{{ sub.name }}"><a href="#/hub">{{ sub.name }}</a> </label>
+                            <label for="{{ sub.name }}"><a href="#/hubUsers/{{sub.name}}">{{ sub.name }}</a> </label>
                         </div>
                     </div>
                 </div>
                 </div>
-            </div>
+        
+        </div>
     </div>    
 
-<!--Row 3 Nacelle Areas-->
+<!--Row 3 Nacelle Areas EMPTY-->
     <div class="row" id="">
         <div class="container-fluid">
            
