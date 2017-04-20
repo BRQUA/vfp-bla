@@ -403,11 +403,11 @@ $scope.hubStopTakt = function () {
 viewControllers.controller('NacUsersController', ['$scope', '$routeParams', '$firebaseObject', '$firebaseArray', '$interval', '$window', function ($scope, $routeParams, $firebaseObject, $firebaseArray, $interval, $window) 
 { 
  
- var nacAreas = nacelle.child("areas");
+ var nacAreas = firstLine.child("areas");
     
- var syncObject = $firebaseObject(nacelle);
+ var syncObject = $firebaseObject(firstLine);
  var syncObject2 = $firebaseObject(nacAreas);
- var syncObject3 = $firebaseObject(nacinfo);
+ var syncObject3 = $firebaseObject(firstLineInfo);
  var syncObject4 = $firebaseObject(config);
     
  syncObject.$bindTo($scope, "nacelle");
@@ -436,17 +436,18 @@ viewControllers.controller('NacUsersController', ['$scope', '$routeParams', '$fi
  $scope.nacStopBtn = true;
     
  $scope.suppTrigger = function (areaItem, userItem, from) {
+     console.log(areaItem, userItem, from);
 //    if area not true, then make true, start log timer 
      if (!$scope.areas[areaItem].subs[userItem].trigger) {
-         $scope.nacelle.areas[areaItem].subs[userItem].trigger = true;
-         $scope.nacelle.areas[areaItem].subs[userItem].style = from;
-         $scope.nacelle.areas[areaItem].subs[userItem].opStyle = from + '-op';
+         $scope.areas[areaItem].subs[userItem].trigger = true;
+         $scope.areas[areaItem].subs[userItem].style = from;
+         $scope.areas[areaItem].subs[userItem].opStyle = from + '-op';
          $scope.nacStartLog(areaItem, userItem, from);
      }
      else if ($scope.areas[areaItem].subs[userItem].trigger) {
-         $scope.nacelle.areas[areaItem].subs[userItem].trigger = false;
-         $scope.nacelle.areas[areaItem].subs[userItem].style = "time-slot";
-         $scope.nacelle.areas[areaItem].subs[userItem].opStyle = 'time-slot-op';
+         $scope.areas[areaItem].subs[userItem].trigger = false;
+         $scope.areas[areaItem].subs[userItem].style = "time-slot";
+         $scope.areas[areaItem].subs[userItem].opStyle = 'time-slot-op';
          $scope.nacStopLog(areaItem, userItem, from);
      }
      return {
