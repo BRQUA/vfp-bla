@@ -14,7 +14,7 @@ angular.module('angular-openweathermap', [
         },
         link: function (scope, element, attrs) {
             $http.get('http://api.openweathermap.org/data/2.5/weather?units=metric&q='+ scope.cityName +'&appid=8cda16d5b6f4031f3357f14eace5966f').success(function(res){
-//                http://api.openweathermap.org/data/2.5/weather?q=brighton,co&appid=8cda16d5b6f4031f3357f14eace5966f
+//                http://api.openweathermap.org/data/2.5/weather?q=80603&appid=8cda16d5b6f4031f3357f14eace5966f
                 scope.weather = res;
                 // Temperature in Celsius
                 var temperatureC = res.main.temp;

@@ -1,8 +1,15 @@
 var viewControllers = angular.module('viewControllers', ['firebase', 'ngSanitize','angular-openweathermap', 'ngTouch', 'ui.grid', 'ui.grid.cellNav', 'ui.grid.edit', 'ui.grid.resizeColumns', 'ui.grid.pinning', 'ui.grid.selection', 'ui.grid.moveColumns', 'ui.grid.exporter', 'ui.grid.importer', 'ui.grid.grouping', 'ngTable']);
 
         var ref = firebase.database().ref();
-        var firstLine = ref.child("1stLine");
+        var firstLine = ref.child("V110");
         var firstLineInfo = firstLine.child("info");
+        var secondLine = ref.child("V136");
+        var secondLineInfo = secondLine.child("info");
+        var thirdLine = ref.child("Finish");
+        var thirdLineInfo = thirdLine.child("info");
+
+
+
         var nacelle = ref.child("nacelle");
         var nacinfo = nacelle.child("info");
         var hub = ref.child("hub");
@@ -42,6 +49,18 @@ viewControllers.controller('MainController', ['$scope', '$firebaseObject', '$rou
 
         var syncObject2 = $firebaseObject(firstLineInfo);
         syncObject2.$bindTo($scope, "firstLineInfo");
+    
+            var syncObject = $firebaseObject(secondLine);
+        syncObject.$bindTo($scope, "secondLine");
+
+        var syncObject2 = $firebaseObject(secondLineInfo);
+        syncObject2.$bindTo($scope, "secondLineInfo");
+    
+            var syncObject = $firebaseObject(thirdLine);
+        syncObject.$bindTo($scope, "thirdLine");
+
+        var syncObject2 = $firebaseObject(thirdLineInfo);
+        syncObject2.$bindTo($scope, "thirdLineInfo");
     
         var syncObject = $firebaseObject(nacelle);
         syncObject.$bindTo($scope, "nacelle");

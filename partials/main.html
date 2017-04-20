@@ -71,40 +71,36 @@
     <div class="row" id="">
         <div class="container-fluid">
 
-        <!--1st Line info-->
-        <div class="col-sm-4 col-md-4 col-lg-4">
+        <!--V110 Shell Line info-->
+          <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="container-fluid">
                     <div id="areaContainer">{{firstLine.name}}</div>
                     <div>
                         <table id="infoStyle">
                             <tr>
                                 <td>Takt Time</td>
-                                <td>{{hubInfo.staticTakt}}</td>
+                                <td>{{firstLineInfo.staticTakt}}</td>
                             </tr>
                             <tr>
                                 <td>Actual Takt</td>
-                                <td>{{hubInfo.actualTakt | number:1}}</td>
+                                <td>{{firstLineInfo.actualTakt | number:1}}</td>
                             </tr>
                             <tr>
                                 <td>Accumulated</td>
-                                <td style="color:{{hub.info.accTimeColor}};">{{hubInfo.accTime | number:1}}</td>
+                                <td style="color:{{firstLineInfo.accTimeColor}};">{{firstLineInfo.accTime | number:1}}</td>
                             </tr>
                             <tr>
                                 <td>Last Step</td>
-                                <td>{{hubInfo.lastStep | date:'shortTime'}}</td>
+                                <td>{{firstLineInfo.lastStep | date:'shortTime'}}</td>
                             </tr>
                              <tr>
                                 <td>Status</td>
-                                <td class="{{hub.status}}">{{hub.status}}</td>
+                                <td class="{{firstLine.status}}">{{firstLine.status}}</td>
                             </tr>
                         </table>
                     </div>
                         </div>
-                            <!--Hub buttons-->
-                <div>
-                    <!--Hub Area buttons-->  
-                    <div class="container-fluid">        
-                <table id="infoStyle">
+               <table id="infoStyle">
                     <tr>
                         
                         <td>Actual</td>
@@ -112,54 +108,51 @@
                         <td>Goal</td>
                     </tr>
                     <tr> 
-                        <td>{{nacInfo.actualGoal}}</td>
+                        <td>{{firstLineInfo.actualGoal}}</td>
                         <td>15</td>
-                        <td>{{nacInfo.weeklyGoal}}</td>
+                        <td>{{firstLineInfo.weeklyGoal}}</td>
                     </tr>
                    
                 </table>
-                        
-                        <div class="{{sub.style}}" ng-repeat="sub in firstLine.subs">
-                            <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
-                            <label for="{{ sub.name }}"><a href="#/hubUsers/{{sub.name}}">{{ sub.name }}</a> </label>
-                        </div>
+                     <div ng-repeat="item in firstLine.areas">
+                <div class="">
+                    <div id="areaLabels" class="{{item.style}}">
+                        <input type="checkbox" id="{{ item.name }}" ng-model="item.trigger" ng-disabled="!config.mainBtnsDisabled">
+                        <label for="{{ item.name }}"><a href="#/area/{{item.name}}">{{ item.name }}</a> </label>
                     </div>
                 </div>
+            </div>
                 </div>
         <!-- v136 Shell info -->
         <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="container-fluid">
-                    <div id="areaContainer">V136 Shell</div>
+                    <div id="areaContainer">{{secondLine.name}}</div>
                     <div>
                         <table id="infoStyle">
                             <tr>
                                 <td>Takt Time</td>
-                                <td>{{nacInfo.staticTakt}}</td>
+                                <td>{{secondLineInfo.staticTakt}}</td>
                             </tr>
                             <tr>
                                 <td>Actual Takt</td>
-                                <td>{{nacInfo.actualTakt | number:1}}</td>
+                                <td>{{secondLineInfo.actualTakt | number:1}}</td>
                             </tr>
                             <tr>
                                 <td>Accumulated</td>
-                                <td style="color:{{nacelle.info.accTimeColor}};">{{nacInfo.accTime | number:1}}</td>
+                                <td style="color:{{secondLineInfo.accTimeColor}};">{{secondLineInfo.accTime | number:1}}</td>
                             </tr>
                             <tr>
                                 <td>Last Step</td>
-                                <td>{{nacInfo.lastStep | date:'shortTime'}}</td>
+                                <td>{{secondLineInfo.lastStep | date:'shortTime'}}</td>
                             </tr>
                              <tr>
                                 <td>Status</td>
-                                <td class="{{nacelle.status}}">{{nacelle.status}}</td>
+                                <td class="{{secondLineInfo.status}}">{{secondLineInfo.status}}</td>
                             </tr>
                         </table>
                     </div>
                         </div>
-                     <div ng-repeat="item in nacelle.areas">
-                <div class="">
-  
-                    
-                    <table id="infoStyle">
+               <table id="infoStyle">
                     <tr>
                         
                         <td>Actual</td>
@@ -167,53 +160,51 @@
                         <td>Goal</td>
                     </tr>
                     <tr> 
-                        <td>{{hubInfo.actualGoal}}</td>
+                        <td>{{secondLineInfo.actualGoal}}</td>
                         <td>15</td>
-                        <td>{{hubInfo.weeklyGoal}}</td>
+                        <td>{{secondLineInfo.weeklyGoal}}</td>
                     </tr>
                    
                 </table>
-                    <div id="areaLabels" class="{{sub.style}}" ng-repeat="sub in item.subs">
-                        <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
-                        <label for="{{ sub.name }}"><a href="#/area/{{item.name}}">{{ sub.name }}</a> </label>
+                     <div ng-repeat="item in secondLine.areas">
+                <div class="">
+                    <div id="areaLabels" class="{{item.style}}">
+                        <input type="checkbox" id="{{ item.name }}" ng-model="item.trigger" ng-disabled="!config.mainBtnsDisabled">
+                        <label for="{{ item.name }}"><a href="#/area/{{item.name}}">{{ item.name }}</a> </label>
                     </div>
                 </div>
             </div>
                 </div>
         <!--Finish info-->
-        <div class="col-sm-4 col-md-4 col-lg-4">
+         <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="container-fluid">
-                    <div id="areaContainer">Finish</div>
+                    <div id="areaContainer">{{thirdLine.name}}</div>
                     <div>
                         <table id="infoStyle">
                             <tr>
                                 <td>Takt Time</td>
-                                <td>{{hubInfo.staticTakt}}</td>
+                                <td>{{thirdLineInfo.staticTakt}}</td>
                             </tr>
                             <tr>
                                 <td>Actual Takt</td>
-                                <td>{{hubInfo.actualTakt | number:1}}</td>
+                                <td>{{thirdLineInfo.actualTakt | number:1}}</td>
                             </tr>
                             <tr>
                                 <td>Accumulated</td>
-                                <td style="color:{{hub.info.accTimeColor}};">{{hubInfo.accTime | number:1}}</td>
+                                <td style="color:{{thirdLineInfo.accTimeColor}};">{{thirdLineInfo.accTime | number:1}}</td>
                             </tr>
                             <tr>
                                 <td>Last Step</td>
-                                <td>{{hubInfo.lastStep | date:'shortTime'}}</td>
+                                <td>{{thirdLineInfo.lastStep | date:'shortTime'}}</td>
                             </tr>
                              <tr>
                                 <td>Status</td>
-                                <td class="{{hub.status}}">{{hub.status}}</td>
+                                <td class="{{thirdLineInfo.status}}">{{thirdLineInfo.status}}</td>
                             </tr>
                         </table>
                     </div>
                         </div>
-                            <!--Hub buttons-->
-                <div>
-                    <!--Hub Area buttons-->  
-                    <div class="container-fluid">
-                        <table id="infoStyle">
+               <table id="infoStyle">
                     <tr>
                         
                         <td>Actual</td>
@@ -221,18 +212,20 @@
                         <td>Goal</td>
                     </tr>
                     <tr> 
-                        <td>{{nacInfo.actualGoal}}</td>
+                        <td>{{thirdLineInfo.actualGoal}}</td>
                         <td>15</td>
-                        <td>{{nacInfo.weeklyGoal}}</td>
+                        <td>{{thirdLineInfo.weeklyGoal}}</td>
                     </tr>
                    
                 </table>
-                        <div class="{{sub.style}}" ng-repeat="sub in hub.subs">
-                            <input type="checkbox" id="{{ sub.name }}" ng-model="sub.trigger" ng-disabled="!config.mainBtnsDisabled">
-                            <label for="{{ sub.name }}"><a href="#/hubUsers/{{sub.name}}">{{ sub.name }}</a> </label>
-                        </div>
+                     <div ng-repeat="item in thirdLine.areas">
+                <div class="">
+                    <div id="areaLabels" class="{{item.style}}">
+                        <input type="checkbox" id="{{ item.name }}" ng-model="item.trigger" ng-disabled="!config.mainBtnsDisabled">
+                        <label for="{{ item.name }}"><a href="#/area/{{item.name}}">{{ item.name }}</a> </label>
                     </div>
                 </div>
+            </div>
                 </div>
         
         </div>

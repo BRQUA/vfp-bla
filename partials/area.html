@@ -5,8 +5,8 @@
     <!--Operations areas-->
     <div class="col-sm-3 col-md-8 col-lg-8">
         <div class="container-fluid">
-            <h1 style="font-size:80px;">{{nacelle.areas[areaItem].name}}</h1>
-            <div class="{{sub.opStyle}}" ng-repeat="sub in nacelle.areas[areaItem].subs">
+            <h1 style="font-size:80px;">{{firstLine.areas[areaItem].name}}</h1>
+            <div class="{{sub.opStyle}}" ng-repeat="sub in firstLine.areas[areaItem].subs">
                 <input type="checkbox" id="{{sub.name}}" ng-model="sub.trigger" ng-disabled="true">
                 <label  for="{{sub.name}}"><a href="#/users/{{areaItem}}/{{sub.name}}">{{sub.name}}</a></label>
             </div>
@@ -32,32 +32,36 @@
         <!--Nacelle Takt Information-->
         <div class="row" id="areaScreen">   
         <div class="col-sm-3 col-md-3 col-lg-3" id="infoAreaNac">
+<!--
                 <h1>Nacelle</h1>
             <table style="width:100%;" class="areaScreenTable">
                             <tr>
                                 <td>Takt</td>
-                                <td>{{nacInfo.actualTakt | number:1}}</td>
+                                <td>{{firstLineInfo.actualTakt | number:1}}</td>
                             </tr>
                              <tr>
                                 <td>Status</td>
-                                <td class="{{nacelle.status}}">{{nacelle.status}}</td>
+                                <td class="{{firstLine.status}}">{{firstLine.status}}</td>
                             </tr>
                         </table>
+-->
             </div>
             <!--Nacelle Count Information-->
             <div class="col-sm-2 col-md-2 col-lg-2" id="infoAreaNac">
+<!--
                   <h1>Count</h1>
                     <table style="width:100%" class="areaScreenTable">
                         <tr style="text-align:center">
             <tr>
                 <td>Actual</td>
-                <td>{{nacInfo.actualGoal}}</td>
+                <td>{{firstLineInfo.actualGoal}}</td>
             </tr>
             <tr>
                 <td>Goal</td>
-                <td>{{nacInfo.weeklyGoal}}</td>
+                <td>{{firstLineInfo.weeklyGoal}}</td>
             </tr>
         </table>
+-->
             </div>
             <!--Support Area Labels-->
         <div class=" col-sm-2 col-md-3 col-lg-3">
