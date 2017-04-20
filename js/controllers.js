@@ -442,12 +442,16 @@ viewControllers.controller('NacUsersController', ['$scope', '$routeParams', '$fi
          $scope.areas[areaItem].subs[userItem].trigger = true;
          $scope.areas[areaItem].subs[userItem].style = from;
          $scope.areas[areaItem].subs[userItem].opStyle = from + '-op';
+         $scope.areas[areaItem].trigger = true;
+         $scope.areas[areaItem].style = from;
          $scope.nacStartLog(areaItem, userItem, from);
      }
      else if ($scope.areas[areaItem].subs[userItem].trigger) {
          $scope.areas[areaItem].subs[userItem].trigger = false;
          $scope.areas[areaItem].subs[userItem].style = "time-slot";
          $scope.areas[areaItem].subs[userItem].opStyle = 'time-slot-op';
+         $scope.areas[areaItem].trigger = false;
+         $scope.areas[areaItem].style = "time-slot";
          $scope.nacStopLog(areaItem, userItem, from);
      }
      return {
