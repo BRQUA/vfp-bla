@@ -469,6 +469,7 @@ viewControllers.controller('NacUsersController', ['$scope', '$routeParams', '$fi
      $scope.suppTrig = from;
      $scope.suppUser = userItem;
      $scope.elapsedTime = 0;
+     $scope.nacReason = prompt("Enter Reason for support");
      
      // Don't start a new log if we are already loggin
      if ($scope.config.logging) {
@@ -495,6 +496,7 @@ viewControllers.controller('NacUsersController', ['$scope', '$routeParams', '$fi
              , Area: userItem
              , Time: nacLogger
              , Support: from
+                , Reason: $scope.nacReason
          });  
               console.log("Logged because > 0");
          }
@@ -1152,22 +1154,23 @@ viewControllers.controller('ReportingController', ['$scope', '$firebaseArray', '
     $scope.gridOptions.fastWatch = false;
 
     $scope.gridOptions.columnDefs = [
-    { field: 'Timestamp', displayName:'Date',width: '25%', cellFilter: 'date:"shortDate"', type:'date',
+    { field: 'Timestamp', displayName:'Date',width: '10%', cellFilter: 'date:"shortDate"', type:'date',
         sort: {
                 direction: uiGridConstants.DESC,
                 priority: 1
             }},
-    { field: 'Area', width: '25%', 
+    { field: 'Area', width: '10%', 
         sort: {
                 direction: uiGridConstants.ASC,
                 priority: 2
             }},
-    { field: 'Support', width: '25%'},
+    { field: 'Support', width: '10%'},
     { field: 'Time', cellFilter: 'number:2', aggregationType: uiGridConstants.aggregationTypes.avg, aggregationHideLabel: false,width: '25%',
         sort: {
                 direction: uiGridConstants.DESC,
                 priority: 3
-            }}
+            }},
+        { field: 'Reason', width: '60%'}
     ];
     
 }]); //Reporting controller
